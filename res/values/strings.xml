@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">Cipher tools</string>
+    <string name="title_activity_main">Cipher tools</string>
+    <string name="title_activity_braille2text">Braille to Text</string>
+
+    <string-array name="tools">
+        <item>Braille to Text</item>
+        <item>Text to Braill</item>
+        <item>Morse to Text</item>
+        <item>Text to Morse</item>
+        <item>Vigenere</item>
+        <item>Frequency analysis</item>
+        <item>ROT13</item>
+        <item>Roman numbers</item>
+		<item>Mobile to Text</item>
+        <item>Text to Mobile</item>
+        <item>Flags</item>
+        <item>Semaphore</item>
+        <item>Colors</item>   
+    </string-array>
+</resources>
