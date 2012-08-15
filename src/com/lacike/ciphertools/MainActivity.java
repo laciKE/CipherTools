@@ -25,7 +25,7 @@ public class MainActivity extends FragmentActivity implements
 	@Override
 	public void onItemSelected(int index) {
 		if (dualPane) {
-			Fragment fragment = Braille2TextFragment.newInstance();
+			Fragment fragment = ToolFragmentFactory.newToolFragment(index);
 			FragmentTransaction fragmentTransaction = getSupportFragmentManager()
 					.beginTransaction();
 			fragmentTransaction.replace(R.id.tool_frame, fragment);
