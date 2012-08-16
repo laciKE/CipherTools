@@ -17,13 +17,13 @@
 
             <CheckBox
                 android:id="@+id/braille1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="@dimen/brailleInput"
+                android:layout_height="@dimen/brailleInput" />
 
             <CheckBox
                 android:id="@+id/braille2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/brailleInput"
+                android:layout_height="@dimen/brailleInput"
                 />
         </LinearLayout>
 
@@ -34,14 +34,14 @@
 
             <CheckBox
                 android:id="@+id/braille4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/brailleInput"
+                android:layout_height="@dimen/brailleInput"
                 />
 
             <CheckBox
                 android:id="@+id/braille8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/brailleInput"
+                android:layout_height="@dimen/brailleInput"
                 />
         </LinearLayout>
 
@@ -52,14 +52,14 @@
 
             <CheckBox
                 android:id="@+id/braille16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/brailleInput"
+                android:layout_height="@dimen/brailleInput"
                 />
 
             <CheckBox
                 android:id="@+id/braille32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/brailleInput"
+                android:layout_height="@dimen/brailleInput"
                 />
         </LinearLayout>
     </LinearLayout>
@@ -69,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:paddingTop="20dp"
+        android:paddingTop="5dp"
         android:text=""
         android:textSize="80sp" />
 
