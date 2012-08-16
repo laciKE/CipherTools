@@ -43,7 +43,7 @@ public class Braille2TextFragment extends Fragment {
 		return view;
 	}
 
-	public void braille2text(View view) {
+	protected void braille2text(View view) {
 		View rootView = view.getRootView();
 		int brailleValue = 0;
 		int value = 1;

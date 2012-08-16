@@ -6,7 +6,8 @@ public class ToolFragmentFactory {
 	
 	private static String[] toolFragments = new String[] {
 			"com.lacike.ciphertools.Braille2TextFragment",
-			"com.lacike.ciphertools.Text2BrailleFragment"
+			"com.lacike.ciphertools.Text2BrailleFragment",
+			"com.lacike.ciphertools.Morse2TextFragment",
 	};
 	
 	public static Fragment newToolFragment(int index) {

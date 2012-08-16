@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/morse2text_input"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:cursorVisible="false"
+        android:inputType="textMultiLine"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/morse_dot"
+            android:layout_width="@dimen/morseInput"
+            android:layout_height="@dimen/morseInput"
+            android:text="@string/morse_dot"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/morse_dash"
+            android:layout_width="@dimen/morseInput"
+            android:layout_height="@dimen/morseInput"
+            android:text="@string/morse_dash"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/morse_separator"
+            android:layout_width="@dimen/morseInput"
+            android:layout_height="@dimen/morseInput"
+            android:text="@string/morse_separator"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/morse_backspace"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/morseInput"
+            android:layout_marginLeft="5dp"
+            android:text="@string/backspace"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/morse_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/morseInput"
+            android:text="@string/clear"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/morse2text_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/morseInput"
+        android:text="@string/translate"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/morse2text_output"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:cursorVisible="false"
+        android:inputType="textMultiLine"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</LinearLayout>

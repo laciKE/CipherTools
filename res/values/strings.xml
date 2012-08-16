@@ -12,13 +12,20 @@
         <item>Frequency analysis</item>
         <item>ROT13</item>
         <item>Roman numbers</item>
-		<item>Mobile to Text</item>
+        <item>Mobile to Text</item>
         <item>Text to Mobile</item>
         <item>Flags</item>
         <item>Semaphore</item>
-        <item>Colors</item> 
-        <item>Calendar</item>  
+        <item>Colors</item>
+        <item>Calendar</item>
     </string-array>
-    
+
+    <string name="translate">Translate</string>
+    <string name="backspace">Del</string>
+    <string name="clear">Clear</string>
     <string name="text2braille">Text to Braille transform table</string>
+    <string name="morse_dot">.</string>
+    <string name="morse_dash">-</string>
+    <string name="morse_separator">/</string>
+
 </resources>
