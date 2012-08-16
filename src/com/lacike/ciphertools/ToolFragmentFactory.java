@@ -5,7 +5,8 @@ import android.support.v4.app.Fragment;
 public class ToolFragmentFactory {
 	
 	private static String[] toolFragments = new String[] {
-			"com.lacike.ciphertools.Braille2TextFragment"
+			"com.lacike.ciphertools.Braille2TextFragment",
+			"com.lacike.ciphertools.Text2BrailleFragment"
 	};
 	
 	public static Fragment newToolFragment(int index) {

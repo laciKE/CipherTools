@@ -2,11 +2,10 @@
 
     <string name="app_name">Cipher tools</string>
     <string name="title_activity_main">Cipher tools</string>
-    <string name="title_activity_braille2text">Braille to Text</string>
 
     <string-array name="tools">
         <item>Braille to Text</item>
-        <item>Text to Braill</item>
+        <item>Text to Braille</item>
         <item>Morse to Text</item>
         <item>Text to Morse</item>
         <item>Vigenere</item>
@@ -17,6 +16,9 @@
         <item>Text to Mobile</item>
         <item>Flags</item>
         <item>Semaphore</item>
-        <item>Colors</item>   
+        <item>Colors</item> 
+        <item>Calendar</item>  
     </string-array>
+    
+    <string name="text2braille">Text to Braille transform table</string>
 </resources>
