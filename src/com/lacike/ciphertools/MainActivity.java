@@ -10,9 +10,6 @@ public class MainActivity extends FragmentActivity implements
 		ToolsFragment.OnItemSelectedListener {
 
 	private boolean dualPane;
-	private Class[] toolActivities = new Class[] { 
-			Braille2TextActivity.class 
-			};
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -32,7 +29,10 @@ public class MainActivity extends FragmentActivity implements
 			fragmentTransaction.addToBackStack(null);
 			fragmentTransaction.commit();
 		} else {
-			Intent intent = new Intent(this, toolActivities[index]);
+			Intent intent = new Intent(this, ToolActivity.class);
+			intent.putExtra(ToolActivity.INDEX, index);
+			String toolLabel = getResources().getStringArray(R.array.tools)[index];
+			intent.putExtra(ToolActivity.LABEL, toolLabel);
 			startActivity(intent);
 		}
 	}

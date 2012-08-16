@@ -21,8 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Braille2TextActivity"
-            android:label="@string/title_activity_braille2text" >
+            android:name=".ToolActivity" >
          </activity>
     </application>
 
