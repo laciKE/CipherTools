@@ -87,12 +87,15 @@ public class Morse2TextFragment extends Fragment {
 				position *= 2;
 			} else if (inputText.charAt(i) == '-') {
 				position = position * 2 + 1;
+			} else if (inputText.charAt(i) == '\n') {
+				outputText.append('\n');
+				position = 1;
 			} else if (position < morseTree.length()) {
 				outputText.append(morseTree.charAt(position));
 				position = 1;
 			} else {
 				outputText.append(' ');
-				position = 1;
+				position = 1;			
 			}
 		}
 

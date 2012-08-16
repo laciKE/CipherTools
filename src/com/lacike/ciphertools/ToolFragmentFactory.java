@@ -8,6 +8,7 @@ public class ToolFragmentFactory {
 			"com.lacike.ciphertools.Braille2TextFragment",
 			"com.lacike.ciphertools.Text2BrailleFragment",
 			"com.lacike.ciphertools.Morse2TextFragment",
+			"com.lacike.ciphertools.Text2MorseFragment",
 	};
 	
 	public static Fragment newToolFragment(int index) {

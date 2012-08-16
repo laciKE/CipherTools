@@ -8,7 +8,7 @@
         <item>Text to Braille</item>
         <item>Morse to Text</item>
         <item>Text to Morse</item>
-        <item>Vigenere</item>
+        <!--  <item>Vigenere</item>
         <item>Frequency analysis</item>
         <item>ROT13</item>
         <item>Roman numbers</item>
@@ -17,7 +17,7 @@
         <item>Flags</item>
         <item>Semaphore</item>
         <item>Colors</item>
-        <item>Calendar</item>
+        <item>Calendar</item>-->
     </string-array>
 
     <string name="translate">Translate</string>
