@@ -35,6 +35,7 @@
     <string name="a1">A=1</string>
     <string name="encode">Encode</string>
     <string name="decode">Decode</string>
+    <string name="invalid_vigenere_key">Key must contain at least one letter.</string>
 
     <string-array name="flags_meaning">
         <item>I have a diver down; keep well clear at slow speed</item>

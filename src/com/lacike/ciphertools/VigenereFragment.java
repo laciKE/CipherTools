@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class VigenereFragment extends Fragment {
 	public static VigenereFragment newInstance() {
@@ -43,6 +44,12 @@ public class VigenereFragment extends Fragment {
 		EditText keyInput = (EditText) rootView.findViewById(R.id.vigenere_key);
 		String key = toUpperLetters(keyInput.getText().toString());
 
+		if((key == null) || (key.length() == 0)) {
+			Toast.makeText(getActivity(), R.string.invalid_vigenere_key, Toast.LENGTH_SHORT).show();
+			keyInput.requestFocus();
+			return;
+		}
+		
 		EditText messageInput = (EditText) rootView
 				.findViewById(R.id.vigenere_input);
 		String message = toUpperLetters(messageInput.getText().toString());
