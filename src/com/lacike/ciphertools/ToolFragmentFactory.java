@@ -11,6 +11,7 @@ public class ToolFragmentFactory {
 			"com.lacike.ciphertools.Text2MorseFragment",
 			"com.lacike.ciphertools.VigenereFragment",
 			"com.lacike.ciphertools.FlagsMeaningFragment",
+			"com.lacike.ciphertools.ColorsFragment",
 	};
 	
 	public static Fragment newToolFragment(int index) {

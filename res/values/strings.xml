@@ -10,15 +10,18 @@
         <item>Text to Morse</item>
         <item>Vigenere</item>
         <item>Maritime signal flags with meaning</item>
+        <item>Colors</item>
         <!--
         <item>Frequency analysis</item>
         <item>ROT13</item>
+        <item>Atbash</item>
         <item>Roman numbers</item>
         <item>Mobile to Text</item>
         <item>Text to Mobile</item>
         <item>Semaphore</item>
-        <item>Colors</item>
+        <item>ASCII</item>
         <item>Calendar</item>
+        <item>Alphabet</item>
         -->
     </string-array>
 
@@ -36,6 +39,8 @@
     <string name="encode">Encode</string>
     <string name="decode">Decode</string>
     <string name="invalid_vigenere_key">Key must contain at least one letter.</string>
+    <string name="aditive_color_mixing">Aditive color mixing</string>
+    <string name="subtractive_color_mixing">Subtractive color mixing</string>
 
     <string-array name="flags_meaning">
         <item>I have a diver down; keep well clear at slow speed</item>
