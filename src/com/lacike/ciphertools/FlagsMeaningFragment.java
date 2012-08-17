@@ -1,12 +1,9 @@
 package com.lacike.ciphertools;
 
-import java.util.ArrayList;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -56,7 +53,6 @@ public class FlagsMeaningFragment extends Fragment {
 			ImageView flag = new ImageView(context);
 			flag.setLayoutParams(flagParams);
 			int flagId = getResources().getIdentifier("flag_"+(char)('a'+i), "drawable", "com.lacike.ciphertools");
-			//Log.d("RESOURCES", "flag_"+(char)('a'+i) + " return "+flagId);
 			flag.setImageResource(flagId);
 
 			TextView character = new TextView(context);

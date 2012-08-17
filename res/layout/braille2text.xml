@@ -17,13 +17,13 @@
 
             <CheckBox
                 android:id="@+id/braille1"
-                android:layout_width="@dimen/brailleInput"
-                android:layout_height="@dimen/brailleInput" />
+                android:layout_width="@dimen/braille_input_size"
+                android:layout_height="@dimen/braille_input_size" />
 
             <CheckBox
                 android:id="@+id/braille2"
-                android:layout_width="@dimen/brailleInput"
-                android:layout_height="@dimen/brailleInput"
+                android:layout_width="@dimen/braille_input_size"
+                android:layout_height="@dimen/braille_input_size"
                 />
         </LinearLayout>
 
@@ -34,14 +34,14 @@
 
             <CheckBox
                 android:id="@+id/braille4"
-                android:layout_width="@dimen/brailleInput"
-                android:layout_height="@dimen/brailleInput"
+                android:layout_width="@dimen/braille_input_size"
+                android:layout_height="@dimen/braille_input_size"
                 />
 
             <CheckBox
                 android:id="@+id/braille8"
-                android:layout_width="@dimen/brailleInput"
-                android:layout_height="@dimen/brailleInput"
+                android:layout_width="@dimen/braille_input_size"
+                android:layout_height="@dimen/braille_input_size"
                 />
         </LinearLayout>
 
@@ -52,14 +52,14 @@
 
             <CheckBox
                 android:id="@+id/braille16"
-                android:layout_width="@dimen/brailleInput"
-                android:layout_height="@dimen/brailleInput"
+                android:layout_width="@dimen/braille_input_size"
+                android:layout_height="@dimen/braille_input_size"
                 />
 
             <CheckBox
                 android:id="@+id/braille32"
-                android:layout_width="@dimen/brailleInput"
-                android:layout_height="@dimen/brailleInput"
+                android:layout_width="@dimen/braille_input_size"
+                android:layout_height="@dimen/braille_input_size"
                 />
         </LinearLayout>
     </LinearLayout>

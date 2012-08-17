@@ -22,7 +22,7 @@
         <Button
             android:id="@+id/text2morse_submit"
             android:layout_width="0dp"
-            android:layout_height="@dimen/morseInput"
+            android:layout_height="@dimen/morse_input_size"
             android:layout_weight="3"
             android:text="@string/translate"
             android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -30,7 +30,7 @@
         <Button
             android:id="@+id/text2morse_clear"
             android:layout_width="0dp"
-            android:layout_height="@dimen/morseInput"
+            android:layout_height="@dimen/morse_input_size"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:text="@string/clear"

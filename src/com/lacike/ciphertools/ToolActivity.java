@@ -5,7 +5,6 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 
 public class ToolActivity extends FragmentActivity {
 	public static final String INDEX = "index";
@@ -17,7 +16,6 @@ public class ToolActivity extends FragmentActivity {
 		setContentView(R.layout.tool_activity);
 
 		Configuration configuration = getResources().getConfiguration();
-		//Log.d("SCREEN", "width " + (configuration.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK));
 		boolean landscape = (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE);
 		//boolean largeScreen = ((configuration.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE);
 		boolean largeScreen = getResources().getBoolean(R.bool.screen_large);

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/key"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/vigenere_key"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/message"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/vigenere_input"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:inputType="textMultiLine"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/vigenere_alphabet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/vigenere_a0"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/vigenere_input_size"
+                android:checked="true"
+                android:text="@string/a0" />
+
+            <RadioButton
+                android:id="@+id/vigenere_a1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/vigenere_input_size"
+                android:text="@string/a1" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/vigenere_operation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/vigenere_encode"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/vigenere_input_size"
+                android:text="@string/encode" />
+
+            <RadioButton
+                android:id="@+id/vigenere_decode"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/vigenere_input_size"
+                android:checked="true"
+                android:text="@string/decode" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/vigenere_submit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vigenere_input_size"
+            android:layout_weight="3"
+            android:text="@string/translate"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/vigenere_clear"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vigenere_input_size"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/clear"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/vigenere_output"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:inputType="textMultiLine"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</LinearLayout>
