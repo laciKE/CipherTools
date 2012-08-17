@@ -21,6 +21,7 @@ public class ToolsFragment extends ListFragment {
 		tools = getResources().getStringArray(R.array.tools);
 		setListAdapter(new ArrayAdapter<String>(context,
 				android.R.layout.simple_list_item_1, tools));
+        getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 	}
 
 	@Override
@@ -36,6 +37,7 @@ public class ToolsFragment extends ListFragment {
 	
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
+		l.setItemChecked(position, true);
 		onItemSelectedListener.onItemSelected(position);
 	}
 

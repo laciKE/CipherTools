@@ -9,7 +9,10 @@ import android.support.v4.app.FragmentTransaction;
 public class MainActivity extends FragmentActivity implements
 		ToolsFragment.OnItemSelectedListener {
 
+	public static final String INDEX = "index";
+
 	private boolean dualPane;
+	private int index = 0;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -17,16 +20,31 @@ public class MainActivity extends FragmentActivity implements
 		setContentView(R.layout.tools);
 		// setContentView(R.layout.braille2text);
 		dualPane = (findViewById(R.id.tool_frame) != null);
+		
+		if(savedInstanceState != null) {
+			index = savedInstanceState.getInt(INDEX, 0);
+		}
+		
+		if(dualPane){
+			onItemSelected(index);
+		}
+	}
+
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		outState.putInt(INDEX, index);
 	}
 
 	@Override
 	public void onItemSelected(int index) {
+		this.index = index;
 		if (dualPane) {
 			Fragment fragment = ToolFragmentFactory.newToolFragment(index);
 			FragmentTransaction fragmentTransaction = getSupportFragmentManager()
 					.beginTransaction();
 			fragmentTransaction.replace(R.id.tool_frame, fragment);
-			fragmentTransaction.addToBackStack(null);
+			// fragmentTransaction.addToBackStack(null);
 			fragmentTransaction.commit();
 		} else {
 			Intent intent = new Intent(this, ToolActivity.class);
