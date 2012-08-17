@@ -12,7 +12,7 @@ public class MainActivity extends FragmentActivity implements
 	public static final String INDEX = "index";
 
 	private boolean dualPane;
-	private int index = 0;
+	private int index = -1;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -20,12 +20,12 @@ public class MainActivity extends FragmentActivity implements
 		setContentView(R.layout.tools);
 		// setContentView(R.layout.braille2text);
 		dualPane = (findViewById(R.id.tool_frame) != null);
-		
-		if(savedInstanceState != null) {
-			index = savedInstanceState.getInt(INDEX, 0);
+
+		if (savedInstanceState != null) {
+			index = savedInstanceState.getInt(INDEX, -1);
 		}
-		
-		if(dualPane){
+
+		if (dualPane && (index > -1)) {
 			onItemSelected(index);
 		}
 	}

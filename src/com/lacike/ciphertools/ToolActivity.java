@@ -17,9 +17,10 @@ public class ToolActivity extends FragmentActivity {
 		setContentView(R.layout.tool_activity);
 
 		Configuration configuration = getResources().getConfiguration();
-		//Log.d("SCREEN", "size " + (configuration.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK));
+		//Log.d("SCREEN", "width " + (configuration.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK));
 		boolean landscape = (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE);
-		boolean largeScreen = ((configuration.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_NORMAL);
+		//boolean largeScreen = ((configuration.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE);
+		boolean largeScreen = getResources().getBoolean(R.bool.screen_large);
 		if (landscape && largeScreen) {
 			// If the screen is now in landscape mode, we can show the
 			// dialog in-line so we don't need this activity.
