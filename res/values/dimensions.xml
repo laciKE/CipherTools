@@ -2,4 +2,5 @@
 <resources>
     <dimen name="brailleInput">60dp</dimen>
     <dimen name="morseInput">60dp</dimen>
+    <dimen name="flag_size">50dp</dimen>
 </resources>

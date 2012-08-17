@@ -8,13 +8,13 @@
         <item>Text to Braille</item>
         <item>Morse to Text</item>
         <item>Text to Morse</item>
+        <item>Maritime signal flags with meaning</item>
         <!--  <item>Vigenere</item>
         <item>Frequency analysis</item>
         <item>ROT13</item>
         <item>Roman numbers</item>
         <item>Mobile to Text</item>
         <item>Text to Mobile</item>
-        <item>Flags</item>
         <item>Semaphore</item>
         <item>Colors</item>
         <item>Calendar</item>-->
@@ -27,5 +27,35 @@
     <string name="morse_dot">.</string>
     <string name="morse_dash">-</string>
     <string name="morse_separator">/</string>
+    
+    <string-array name="flags_meaning">
+        <item>I have a diver down; keep well clear at slow speed</item>
+        <item>I am taking in, or discharging, or carrying dangerous goods.</item>
+        <item>Affirmative.</item>
+        <item>Keep clear of me; I am maneuvering with difficulty</item>
+        <item>I am altering my course to starboard.</item>
+        <item>I am disabled; communicate with me.</item>
+        <item>I require a pilot.</item>
+        <item>I have a pilot on board.</item>
+        <item>I am altering my course to port.</item>
+        <item>I am on fire and have dangerous cargo on board: keep well clear of me.</item>
+        <item>I wish to communicate with you.</item>
+        <item>You should stop your vessel instantly.</item>
+        <item>My vessel is stopped and making no way through the water.</item>
+        <item>Negative.</item>
+        <item>Man overboard.</item>
+        <item>In harbour: All persons should report on board as the vessel is about to proceed to sea.
+At sea: It may be used by fishing vessels to mean: "My nets have come fast upon an obstruction."</item>
+		<item>My vessel is \'healthy\' and I request free pratique.</item>
+		<item>The way is off my ship.</item>
+		<item>I am operating astern propulsion.</item>
+		<item>Keep clear of me; I am engaged in pair trawling.</item>
+		<item>You are running into danger.</item>
+		<item>I require assistance.</item>
+		<item>I require medical assistance.</item>
+		<item>Stop carrying out your intentions and watch for my signals.</item>
+		<item>I am dragging my anchor.</item>
+		<item>I require a tug.</item>
+    </string-array>
 
 </resources>
