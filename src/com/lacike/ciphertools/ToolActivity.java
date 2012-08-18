@@ -36,6 +36,15 @@ public class ToolActivity extends FragmentActivity {
 
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.tool_frame, fragment).commit();
+		} else {
+			setTitle(savedInstanceState.getCharSequence(LABEL));
 		}
+		
+	}
+	
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		outState.putCharSequence(LABEL, getTitle());
 	}
 }
