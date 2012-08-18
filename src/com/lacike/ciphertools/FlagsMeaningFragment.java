@@ -52,7 +52,9 @@ public class FlagsMeaningFragment extends Fragment {
 
 			ImageView flag = new ImageView(context);
 			flag.setLayoutParams(flagParams);
-			int flagId = getResources().getIdentifier("flag_"+(char)('a'+i), "drawable", "com.lacike.ciphertools");
+			String flagStrId = "flag_"+(char)('a'+i);
+			flag.setContentDescription(flagStrId);
+			int flagId = getResources().getIdentifier(flagStrId, "drawable", "com.lacike.ciphertools");
 			flag.setImageResource(flagId);
 
 			TextView character = new TextView(context);

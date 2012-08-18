@@ -10,7 +10,8 @@
         <item>Text to Morse</item>
         <item>Vigenere</item>
         <item>Maritime signal flags with meaning</item>
-        <item>Colors</item>
+        <item>Color mixing</item>
+        <item>Alphabet</item>
         <!--
         <item>Frequency analysis</item>
         <item>ROT13</item>
@@ -21,7 +22,6 @@
         <item>Semaphore</item>
         <item>ASCII</item>
         <item>Calendar</item>
-        <item>Alphabet</item>
         -->
     </string-array>
 
@@ -70,6 +70,35 @@ At sea: It may be used by fishing vessels to mean: "My nets have come fast upon 
         <item>Stop carrying out your intentions and watch for my signals.</item>
         <item>I am dragging my anchor.</item>
         <item>I require a tug.</item>
+    </string-array>
+    
+    <string-array name="phonetic_alphabet">
+        <item>Alfa</item>
+        <item>Bravo</item>
+        <item>Charlie</item>
+        <item>Delta</item>
+        <item>Echo</item>
+        <item>Foxtrot</item>
+        <item>Golf</item>
+        <item>Hotel</item>
+        <item>India</item>
+        <item>Juliet</item>
+        <item>Kilo</item>
+        <item>Lima</item>
+        <item>Mike</item>
+        <item>November</item>
+        <item>Oscar</item>
+        <item>Papa</item>
+        <item>Quebec</item>
+        <item>Romeo</item>
+        <item>Sierra</item>
+        <item>Tango</item>
+        <item>Uniform</item>
+        <item>Victor</item>
+        <item>Whiskey</item>
+        <item>X-Ray</item>
+        <item>Yankee</item>
+        <item>Zulu</item>
     </string-array>
 
 </resources>

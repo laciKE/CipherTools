@@ -21,7 +21,7 @@ public class Braille2TextFragment extends Fragment {
 	private static String[] braille = new String[] { "", "A", "", "C", "", "B",
 			"I", "F", "", "E", "", "D", "", "H", "J", "G", "", "K", "", "M",
 			"", "L", "S", "P", "", "O", "", "N", "", "R", "T", "Q", "", "",
-			"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "U",
+			"", "", "", "", "", "", "", "", "", "", "", "", "W", "", "", "U",
 			"", "X", "", "V", "", "", "", "Z", "", "Y", "", "W", "", "" };
 
 	@Override

@@ -13,7 +13,7 @@ public class Text2MorseFragment extends Fragment {
 		return new Text2MorseFragment();
 	}
 
-	private static String[] morseCode = new String[] { ".-", "-...", "-.-.",
+	public static String[] morseCode = new String[] { ".-", "-...", "-.-.",
 			"-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..",
 			"--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-",
 			"...-", ".--", "-..-", "-.--", "--.." };
