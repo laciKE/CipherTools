@@ -37,9 +37,7 @@ public class FlagsMeaningFragment extends Fragment {
 		int paddingPx = (int) TypedValue.applyDimension(
 				TypedValue.COMPLEX_UNIT_DIP, paddingDp, getResources()
 						.getDisplayMetrics());
-		int flagSize = (int) TypedValue.applyDimension(
-				TypedValue.COMPLEX_UNIT_DIP, getResources().getDimension(R.dimen.flag_size), getResources()
-				.getDisplayMetrics());
+		int flagSize = (int) getResources().getDimension(R.dimen.flag_size);
 		LayoutParams flagParams = new LayoutParams(flagSize, flagSize);
 
 		for (int i = 0; i < meanings.length; i++) {

@@ -3,5 +3,5 @@
     <dimen name="braille_input_size">60dp</dimen>
     <dimen name="morse_input_size">60dp</dimen>
     <dimen name="vigenere_input_size">50dp</dimen>
-    <dimen name="flag_size">50dp</dimen>
+    <dimen name="flag_size">40dp</dimen>
 </resources>
