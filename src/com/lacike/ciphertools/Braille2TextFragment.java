@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
 /**
@@ -66,7 +65,7 @@ public class Braille2TextFragment extends Fragment {
 		int brailleValue = 0;
 		int value = 1;
 		for (int id : sBrailleInputs) {
-			CheckBox brailleInput = (CheckBox) rootView.findViewById(id);
+			MyCheckBox brailleInput = (MyCheckBox) rootView.findViewById(id);
 			if (brailleInput.isChecked()) {
 				brailleValue += value;
 			}
