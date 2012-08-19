@@ -5,19 +5,31 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 
+/**
+ * Creates fragment for Text2Morse conversion.
+ */
 public class Text2MorseFragment extends Fragment {
 
 	public static Text2MorseFragment newInstance() {
 		return new Text2MorseFragment();
 	}
 
-	public static String[] morseCode = new String[] { ".-", "-...", "-.-.",
+	/**
+	 * Morse codes for letters.
+	 */
+	public static String[] sMorseCode = new String[] { ".-", "-...", "-.-.",
 			"-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..",
 			"--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-",
 			"...-", ".--", "-..-", "-.--", "--.." };
 
+	/**
+	 * Returns view for {@link Text2MorseFragment} and sets
+	 * {@link OnClickListener} for each {@link Button}.
+	 */
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -46,6 +58,9 @@ public class Text2MorseFragment extends Fragment {
 		return view;
 	}
 
+	/**
+	 * Converts text to Morse code.
+	 */
 	protected void text2morse(View view) {
 		View rootView = view.getRootView();
 		EditText input = (EditText) rootView
@@ -56,13 +71,13 @@ public class Text2MorseFragment extends Fragment {
 
 		StringBuffer outputText = new StringBuffer();
 		for (int i = 0; i < inputText.length(); i++) {
-			if (inputText.charAt(i) == ' '){
+			if (inputText.charAt(i) == ' ') {
 				outputText.append('/');
 			} else if (inputText.charAt(i) == '\n') {
 				outputText.append('\n');
 			} else {
-				int charCode = inputText.charAt(i)-'A';
-				outputText.append(morseCode[charCode]+'/');
+				int charCode = inputText.charAt(i) - 'A';
+				outputText.append(sMorseCode[charCode] + '/');
 			}
 		}
 
@@ -71,6 +86,9 @@ public class Text2MorseFragment extends Fragment {
 		output.setText(outputText);
 	}
 
+	/**
+	 * Clears input and output {@link EditText}.
+	 */
 	protected void clear(View view) {
 		View rootView = view.getRootView();
 		EditText input = (EditText) rootView

@@ -2,9 +2,13 @@ package com.lacike.ciphertools;
 
 import android.support.v4.app.Fragment;
 
+/**
+ * Creates ToolFragment for concrete tool. Used in ToolActivity and
+ * MainActivity.
+ */
 public class ToolFragmentFactory {
-	
-	private static String[] toolFragments = new String[] {
+
+	private static String[] sToolFragments = new String[] {
 			"com.lacike.ciphertools.Braille2TextFragment",
 			"com.lacike.ciphertools.Text2BrailleFragment",
 			"com.lacike.ciphertools.Morse2TextFragment",
@@ -13,12 +17,16 @@ public class ToolFragmentFactory {
 			"com.lacike.ciphertools.FlagsMeaningFragment",
 			"com.lacike.ciphertools.ColorsFragment",
 			"com.lacike.ciphertools.AlphabetFragment",
-	};
-	
+		};
+
+	/**
+	 * Returns new ToolFragment for concrete tool.
+	 */
 	public static Fragment newToolFragment(int index) {
 		Fragment toolFragment = null;
 		try {
-			toolFragment = (Fragment) Class.forName(toolFragments[index]).newInstance();
+			toolFragment = (Fragment) Class.forName(sToolFragments[index])
+					.newInstance();
 		} catch (InstantiationException e) {
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
@@ -26,7 +34,7 @@ public class ToolFragmentFactory {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		
+
 		return toolFragment;
 	}
 }

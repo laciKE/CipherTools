@@ -5,15 +5,25 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+/**
+ * Creates fragment for Vigenere cipher
+ */
 public class VigenereFragment extends Fragment {
+
 	public static VigenereFragment newInstance() {
 		return new VigenereFragment();
 	}
 
+	/**
+	 * Returns view for {@link VigenereFragment} and sets
+	 * {@link OnClickListener} for each {@link Button}.
+	 */
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -39,17 +49,21 @@ public class VigenereFragment extends Fragment {
 		return view;
 	}
 
+	/**
+	 * Reads and validate input (key and message). Calls decode() or encode().
+	 */
 	protected void vigenere(View view) {
 		View rootView = view.getRootView();
 		EditText keyInput = (EditText) rootView.findViewById(R.id.vigenere_key);
 		String key = toUpperLetters(keyInput.getText().toString());
 
-		if((key == null) || (key.length() == 0)) {
-			Toast.makeText(getActivity(), R.string.invalid_vigenere_key, Toast.LENGTH_SHORT).show();
+		if ((key == null) || (key.length() == 0)) {
+			Toast.makeText(getActivity(), R.string.invalid_vigenere_key,
+					Toast.LENGTH_SHORT).show();
 			keyInput.requestFocus();
 			return;
 		}
-		
+
 		EditText messageInput = (EditText) rootView
 				.findViewById(R.id.vigenere_input);
 		String message = toUpperLetters(messageInput.getText().toString());
@@ -77,6 +91,9 @@ public class VigenereFragment extends Fragment {
 
 	}
 
+	/**
+	 * Encodes message with key in alphabet with 'A' char has value alphabet.
+	 */
 	public String encode(String key, String message, int alphabet) {
 		StringBuffer output = new StringBuffer();
 		for (int i = 0; i < message.length(); i++) {
@@ -88,6 +105,9 @@ public class VigenereFragment extends Fragment {
 		return output.toString();
 	}
 
+	/**
+	 * Decodes message with key in alphabet with 'A' char has value alphabet.
+	 */
 	public String decode(String key, String message, int alphabet) {
 		StringBuffer output = new StringBuffer();
 		for (int i = 0; i < message.length(); i++) {
@@ -99,10 +119,17 @@ public class VigenereFragment extends Fragment {
 		return output.toString();
 	}
 
+	/**
+	 * Returns string transformed to upper case string containing only letters
+	 * ('A'-'Z').
+	 */
 	private String toUpperLetters(String str) {
 		return str.toUpperCase().replaceAll("[^A-Z]", "");
 	}
 
+	/**
+	 * Clears input and output {@link EditText}.
+	 */
 	protected void clear(View view) {
 		View rootView = view.getRootView();
 		EditText input = (EditText) rootView.findViewById(R.id.vigenere_input);

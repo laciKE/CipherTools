@@ -14,24 +14,39 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
+/**
+ * Creates fragment for Alphabet
+ */
 public class AlphabetFragment extends Fragment {
 
 	public static AlphabetFragment newInstance() {
 		return new AlphabetFragment();
 	}
 
+	/**
+	 * Returns view for {@link AlphabetFragment}
+	 */
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.alphabet, container, false);
 
 		Context context = getActivity();
-
-		String[] phonetic_alphabet = getResources().getStringArray(
-				R.array.phonetic_alphabet);
-
 		LinearLayout alphabetList = (LinearLayout) view
 				.findViewById(R.id.alphabet_list);
+		generateAlphabetList(context, alphabetList);
+
+		return view;
+	}
+
+	/**
+	 * Fills alphabetList with rows. Each row contains number, letter, phonetic
+	 * code, Morse code, Braille symbol and flag
+	 */
+	protected void generateAlphabetList(Context context,
+			LinearLayout alphabetList) {
+		String[] phonetic_alphabet = getResources().getStringArray(
+				R.array.phonetic_alphabet);
 
 		int paddingDp = 4;
 		int paddingPx = (int) TypedValue.applyDimension(
@@ -83,7 +98,7 @@ public class AlphabetFragment extends Fragment {
 			morse.setTextAppearance(context,
 					android.R.style.TextAppearance_Large);
 			morse.setGravity(Gravity.CENTER);
-			morse.setText(Text2MorseFragment.morseCode[i]);
+			morse.setText(Text2MorseFragment.sMorseCode[i]);
 
 			ImageView braille = new ImageView(context);
 			braille.setLayoutParams(brailleParams);
@@ -115,10 +130,8 @@ public class AlphabetFragment extends Fragment {
 			separator.setLayoutParams(new LayoutParams(
 					LayoutParams.MATCH_PARENT, 1));
 			separator.setBackgroundColor(Color.DKGRAY);
-			
+
 			alphabetList.addView(separator);
 		}
-
-		return view;
 	}
 }

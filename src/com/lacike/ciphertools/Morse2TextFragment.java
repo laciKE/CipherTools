@@ -4,28 +4,40 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+/**
+ * Creates fragment for Morse2Text conversion
+ */
 public class Morse2TextFragment extends Fragment {
 
 	public static Morse2TextFragment newInstance() {
 		return new Morse2TextFragment();
 	}
 
-	private static int[] morseInputs = new int[] { R.id.morse_dot,
+	private static int[] sMorseInputs = new int[] { R.id.morse_dot,
 			R.id.morse_dash, R.id.morse_separator };
 
-	private static String morseTree = "  ETIANMSURWDKGOHVF?L?PJBXCYZQ??";
+	/**
+	 * MorseTree for effective conversion from morse to letter. For more info
+	 * see morse2text().
+	 */
+	private static String sMorseTree = "  ETIANMSURWDKGOHVF?L?PJBXCYZQ??";
 
+	/**
+	 * Returns view for {@link Morse2TextFragment} and sets
+	 * {@link OnClickListener} for each {@link Button}.
+	 */
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.morse2text, container, false);
 
 		View morseInput;
-		for (int id : morseInputs) {
+		for (int id : sMorseInputs) {
 			morseInput = view.findViewById(id);
 			morseInput.setOnClickListener(new View.OnClickListener() {
 				@Override
@@ -65,6 +77,9 @@ public class Morse2TextFragment extends Fragment {
 		return view;
 	}
 
+	/**
+	 * Adds char in Morse code input on keypress on Morse keyboard.
+	 */
 	protected void morse_input(View view) {
 		View rootView = view.getRootView();
 		EditText input = (EditText) rootView
@@ -74,6 +89,12 @@ public class Morse2TextFragment extends Fragment {
 		input.setText(inputText);
 	}
 
+	/**
+	 * Converts Morse code to text. For each Morse code do this:
+	 * Start in root in morseTree, on dot go to the left subtree, on dash go to
+	 * the right subtree. Result letter is in the node. On invalid MorseCode
+	 * outputs '?', on newline outputs newline, on other chars outputs space.
+	 */
 	protected void morse2text(View view) {
 		View rootView = view.getRootView();
 		EditText input = (EditText) rootView
@@ -90,12 +111,15 @@ public class Morse2TextFragment extends Fragment {
 			} else if (inputText.charAt(i) == '\n') {
 				outputText.append('\n');
 				position = 1;
-			} else if (position < morseTree.length()) {
-				outputText.append(morseTree.charAt(position));
+			} else if (position < sMorseTree.length()) {
+				outputText.append(sMorseTree.charAt(position));
+				position = 1;
+			} else if (position >= sMorseTree.length()) {
+				outputText.append('?');
 				position = 1;
 			} else {
 				outputText.append(' ');
-				position = 1;			
+				position = 1;
 			}
 		}
 
@@ -104,6 +128,9 @@ public class Morse2TextFragment extends Fragment {
 		output.setText(outputText);
 	}
 
+	/**
+	 * Deletes last char in Morse code input.
+	 */
 	protected void backspace(View view) {
 		View rootView = view.getRootView();
 		EditText input = (EditText) rootView
@@ -114,12 +141,15 @@ public class Morse2TextFragment extends Fragment {
 		}
 	}
 
+	/**
+	 * Clears input and output {@link EditText}.
+	 */
 	protected void clear(View view) {
 		View rootView = view.getRootView();
 		EditText input = (EditText) rootView
 				.findViewById(R.id.morse2text_input);
 		input.setText("");
-		
+
 		EditText output = (EditText) rootView
 				.findViewById(R.id.morse2text_output);
 		output.setText("");

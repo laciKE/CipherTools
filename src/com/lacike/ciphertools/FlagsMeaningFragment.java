@@ -1,6 +1,5 @@
 package com.lacike.ciphertools;
 
-
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,24 +13,38 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
+/**
+ * Creates fragment for Flags with their meanings
+ */
 public class FlagsMeaningFragment extends Fragment {
 
 	public static FlagsMeaningFragment newInstance() {
 		return new FlagsMeaningFragment();
 	}
 
+	/**
+	 * Returns view for {@link FlagsMeaningFragment}
+	 */
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.flags_meaning, container, false);
 
 		Context context = getActivity();
-
-		String[] meanings = getResources()
-				.getStringArray(R.array.flags_meaning);
-
 		LinearLayout flagList = (LinearLayout) view
 				.findViewById(R.id.flag_list);
+		generateFlagList(context, flagList);
+
+		return view;
+	}
+
+	/**
+	 * Fills flagList with rows. Each row contains flag, letter and
+	 * International Code of Signals meaning
+	 */
+	protected void generateFlagList(Context context, LinearLayout flagList) {
+		String[] meanings = getResources()
+				.getStringArray(R.array.flags_meaning);
 
 		int paddingDp = 4;
 		int paddingPx = (int) TypedValue.applyDimension(
@@ -50,9 +63,10 @@ public class FlagsMeaningFragment extends Fragment {
 
 			ImageView flag = new ImageView(context);
 			flag.setLayoutParams(flagParams);
-			String flagStrId = "flag_"+(char)('a'+i);
+			String flagStrId = "flag_" + (char) ('a' + i);
 			flag.setContentDescription(flagStrId);
-			int flagId = getResources().getIdentifier(flagStrId, "drawable", "com.lacike.ciphertools");
+			int flagId = getResources().getIdentifier(flagStrId, "drawable",
+					"com.lacike.ciphertools");
 			flag.setImageResource(flagId);
 
 			TextView character = new TextView(context);
@@ -61,13 +75,13 @@ public class FlagsMeaningFragment extends Fragment {
 			character.setTextAppearance(context,
 					android.R.style.TextAppearance_Large);
 			character.setGravity(Gravity.CENTER_VERTICAL);
-			character.setPadding(paddingPx, 0, paddingPx,0);
+			character.setPadding(paddingPx, 0, paddingPx, 0);
 			character.setText(String.valueOf((char) ('A' + i)));
-			
+
 			TextView meaning = new TextView(context);
 			meaning.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,
 					LayoutParams.MATCH_PARENT));
-			meaning.setGravity(Gravity.CENTER_VERTICAL);	
+			meaning.setGravity(Gravity.CENTER_VERTICAL);
 			meaning.setText(meanings[i]);
 
 			linearLayout.addView(flag);
@@ -76,7 +90,5 @@ public class FlagsMeaningFragment extends Fragment {
 
 			flagList.addView(linearLayout);
 		}
-
-		return view;
 	}
 }

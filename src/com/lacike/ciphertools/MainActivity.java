@@ -6,40 +6,50 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 
+/**
+ * Checks dual pane mode (on tablets in landscape uses dual pane layout,
+ * otherwise single pane layout). Shows {@link ToolsFragment} with list of
+ * available tools, onItemSelected shows concrete tool.
+ */
 public class MainActivity extends FragmentActivity implements
 		ToolsFragment.OnItemSelectedListener {
 
-	public static final String INDEX = "index";
+	public static final String INDEX = "mIndex";
 
-	private boolean dualPane;
-	private int index = -1;
+	private boolean mDualPane;
+	private int mIndex = -1;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tools);
 		// setContentView(R.layout.braille2text);
-		dualPane = (findViewById(R.id.tool_frame) != null);
+		mDualPane = (findViewById(R.id.tool_frame) != null);
 
 		if (savedInstanceState != null) {
-			index = savedInstanceState.getInt(INDEX, -1);
+			mIndex = savedInstanceState.getInt(INDEX, -1);
 		}
 
-		if (dualPane && (index > -1)) {
-			onItemSelected(index);
+		if (mDualPane && (mIndex > -1)) {
+			onItemSelected(mIndex);
 		}
 	}
 
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
-		outState.putInt(INDEX, index);
+		outState.putInt(INDEX, mIndex);
 	}
 
+	/**
+	 * Shows concrete tool associated with selected item. In dual pane layout
+	 * shows fragment, in single pane starts {@link ToolActivity} with index
+	 * parameter in {@link Intent}
+	 */
 	@Override
 	public void onItemSelected(int index) {
-		this.index = index;
-		if (dualPane) {
+		this.mIndex = index;
+		if (mDualPane) {
 			Fragment fragment = ToolFragmentFactory.newToolFragment(index);
 			FragmentTransaction fragmentTransaction = getSupportFragmentManager()
 					.beginTransaction();

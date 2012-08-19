@@ -6,12 +6,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/**
+ * Creates fragment for Colors
+ */
 public class ColorsFragment extends Fragment {
 
 	public static ColorsFragment newInstance() {
 		return new ColorsFragment();
 	}
 	
+	/**
+	 * Returns view for {@link ColorsFragment}
+	 */
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
