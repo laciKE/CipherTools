@@ -14,6 +14,8 @@ public class ToolFragmentFactory {
 			"com.lacike.ciphertools.Morse2TextFragment",
 			"com.lacike.ciphertools.Text2MorseFragment",
 			"com.lacike.ciphertools.VigenereFragment",
+			"com.lacike.ciphertools.Rot13Fragment",
+			"com.lacike.ciphertools.AtbashFragment",
 			"com.lacike.ciphertools.FlagsMeaningFragment",
 			"com.lacike.ciphertools.ColorsFragment",
 			"com.lacike.ciphertools.AlphabetFragment",

@@ -5,10 +5,10 @@
     android:orientation="vertical" >
 
     <EditText
-        android:id="@+id/text2morse_input"
+        android:id="@+id/substitution_input"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:inputType="textMultiLine"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -19,17 +19,17 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/text2morse_submit"
+            android:id="@+id/substitution_submit"
             android:layout_width="0dp"
-            android:layout_height="@dimen/morse_input_size"
+            android:layout_height="@dimen/substitution_input_size"
             android:layout_weight="3"
             android:text="@string/translate"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <Button
-            android:id="@+id/text2morse_clear"
+            android:id="@+id/substitution_clear"
             android:layout_width="0dp"
-            android:layout_height="@dimen/morse_input_size"
+            android:layout_height="@dimen/substitution_input_size"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:text="@string/clear"
@@ -37,10 +37,10 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/text2morse_output"
+        android:id="@+id/substitution_output"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="1"
         android:cursorVisible="false"
         android:inputType="textMultiLine"
         android:textAppearance="?android:attr/textAppearanceLarge" />

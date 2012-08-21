@@ -9,13 +9,13 @@
         <item>Morse to Text</item>
         <item>Text to Morse</item>
         <item>Vigenere</item>
+        <item>ROT13</item>
+        <item>Atbash</item>
         <item>Maritime signal flags with meaning</item>
         <item>Color mixing</item>
         <item>Alphabet</item>
         <!--
         <item>Frequency analysis</item>
-        <item>ROT13</item>
-        <item>Atbash</item>
         <item>Roman numbers</item>
         <item>Mobile to Text</item>
         <item>Text to Mobile</item>
