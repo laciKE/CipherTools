@@ -11,6 +11,7 @@
         <item>Vigenere</item>
         <item>ROT13</item>
         <item>Atbash</item>
+        <item>Semaphore</item>
         <item>Maritime signal flags with meaning</item>
         <item>Color mixing</item>
         <item>Alphabet</item>
@@ -19,7 +20,6 @@
         <item>Roman numbers</item>
         <item>Mobile to Text</item>
         <item>Text to Mobile</item>
-        <item>Semaphore</item>
         <item>ASCII</item>
         <item>Calendar</item>
         <item>Streets</item>
@@ -100,6 +100,41 @@ At sea: It may be used by fishing vessels to mean: "My nets have come fast upon 
         <item>X-Ray</item>
         <item>Yankee</item>
         <item>Zulu</item>
+    </string-array>
+    
+    <string name="semaphore_ready">Rest / Space</string>
+    
+    <string-array name="semaphore_description">
+        <item>@string/semaphore_ready</item>
+        <item>Numerals</item>
+        <item>Error / Attention</item>
+        <item>Cancel</item>
+        <item>A / 1</item>
+        <item>B / 2</item>
+        <item>C / 3 / Acknowledge</item>
+        <item>D / 4</item>
+        <item>E / 5</item>
+        <item>F / 6</item>
+        <item>G / 7</item>
+        <item>H / 8</item>
+        <item>I / 9</item>
+        <item>J / Letters</item>
+        <item>K / 0 / Invitation to Transmit</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
     </string-array>
 
 </resources>

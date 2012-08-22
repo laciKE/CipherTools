@@ -17,6 +17,9 @@ public class Braille2TextFragment extends Fragment {
 		return new Braille2TextFragment();
 	}
 
+	/**
+	 * Ids of input RadioButtons for Braille
+	 */
 	private static int[] sBrailleInputs = new int[] { R.id.braille1,
 			R.id.braille2, R.id.braille4, R.id.braille8, R.id.braille16,
 			R.id.braille32 };

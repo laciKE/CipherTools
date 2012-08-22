@@ -13,7 +13,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main" >
+            android:label="@string/title_activity_main" 
+            android:configChanges="orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ToolActivity" >
+            android:name=".ToolActivity"
+            android:configChanges="orientation" >
          </activity>
     </application>
 
