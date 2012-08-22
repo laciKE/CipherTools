@@ -54,8 +54,8 @@ public class AlphabetFragment extends Fragment {
 						.getDisplayMetrics());
 		int flagSize = (int) getResources().getDimension(R.dimen.flag_size);
 		LayoutParams flagParams = new LayoutParams(flagSize, flagSize);
-		LayoutParams brailleParams = new LayoutParams(
-				LayoutParams.WRAP_CONTENT, flagSize);
+		LayoutParams brailleParams = new LayoutParams(flagSize, flagSize);
+		LayoutParams semaphoreParams = new LayoutParams(6*flagSize/5, flagSize);
 
 		for (char ch = 'a'; ch <= 'z'; ch++) {
 			int i = ch - 'a';
@@ -94,15 +94,23 @@ public class AlphabetFragment extends Fragment {
 
 			TextView morse = new TextView(context);
 			morse.setLayoutParams(new LayoutParams(0,
-					LayoutParams.MATCH_PARENT, 2));
+					LayoutParams.MATCH_PARENT, 1));
 			morse.setTextAppearance(context,
 					android.R.style.TextAppearance_Large);
 			morse.setGravity(Gravity.CENTER);
 			morse.setText(Text2MorseFragment.sMorseCode[i]);
 
+			ImageView semaphore = new ImageView(context);
+			semaphore.setLayoutParams(semaphoreParams);
+			String semaphoreStrId = "semaphore_" + ch;
+			semaphore.setContentDescription(semaphoreStrId);
+			int semaphoreId = getResources().getIdentifier(semaphoreStrId,
+					"drawable", "com.lacike.ciphertools");
+			semaphore.setImageResource(semaphoreId);
+
 			ImageView braille = new ImageView(context);
 			braille.setLayoutParams(brailleParams);
-			braille.setPadding(paddingPx, 0, paddingPx, 0);
+			// braille.setPadding(paddingPx, 0, paddingPx, 0);
 			String brailleStrId = "braille_" + ch;
 			braille.setContentDescription(brailleStrId);
 			int brailleId = getResources().getIdentifier(brailleStrId,
@@ -121,6 +129,7 @@ public class AlphabetFragment extends Fragment {
 			linearLayout.addView(character);
 			linearLayout.addView(phonetic);
 			linearLayout.addView(morse);
+			linearLayout.addView(semaphore);
 			linearLayout.addView(braille);
 			linearLayout.addView(flag);
 
