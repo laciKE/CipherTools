@@ -5,7 +5,6 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 
 /**
  * Creates fragment for tool, sets activity's title to tool's name. On
@@ -22,7 +21,6 @@ public class ToolActivity extends FragmentActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Log.d("ToolActivity", "created");
 		setContentView(R.layout.tool_activity);
 
 		Configuration configuration = getResources().getConfiguration();
