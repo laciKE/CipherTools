@@ -1,13 +1,12 @@
 package com.lacike.ciphertools;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -20,6 +19,8 @@ public class SemaphoreFragment extends Fragment {
 	public static SemaphoreFragment newInstance() {
 		return new SemaphoreFragment();
 	}
+
+	public static final String CHECKED_INPUTS = "checkedInputs";
 
 	/**
 	 * Ids of input RadioButtons for Semaphore
@@ -102,10 +103,23 @@ public class SemaphoreFragment extends Fragment {
 		return view;
 	}
 
-	public void onConfigurationChanged(Configuration newConfig) {
-		View lastChecked = this.getView().findViewById(
-				sSemaphoreInputs[mCheckedInputs[1]]);
-		semaphore2text(lastChecked);
+	/**
+	 * Restores previous semaphore figure.
+	 */
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		if (savedInstanceState != null) {
+			mCheckedInputs = savedInstanceState.getIntArray(CHECKED_INPUTS);
+			View lastChecked = getView().findViewById(
+					sSemaphoreInputs[mCheckedInputs[1]]);
+			semaphore2text(lastChecked);
+		}
+	}
+
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		outState.putIntArray(CHECKED_INPUTS, mCheckedInputs);
 	}
 
 	/**
