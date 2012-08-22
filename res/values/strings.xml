@@ -44,10 +44,10 @@
     <string name="subtractive_color_mixing">Subtractive color mixing</string>
 
     <string-array name="flags_meaning">
-        <item>I have a diver down; keep well clear at slow speed</item>
+        <item>I have a diver down; keep well clear at slow speed.</item>
         <item>I am taking in, or discharging, or carrying dangerous goods.</item>
         <item>Affirmative.</item>
-        <item>Keep clear of me; I am maneuvering with difficulty</item>
+        <item>Keep clear of me; I am maneuvering with difficulty.</item>
         <item>I am altering my course to starboard.</item>
         <item>I am disabled; communicate with me.</item>
         <item>I require a pilot.</item>

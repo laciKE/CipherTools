@@ -1,0 +1,139 @@
+<resources>
+
+    <string name="app_name">Šifrovacie pomôcky</string>
+    <string name="title_activity_main">Šifrovacie pomôcky</string>
+
+    <string-array name="tools">
+        <item>Braille &#8594; Text</item>
+        <item>Text &#8594; Braille</item>
+        <item>Morse &#8594; Text</item>
+        <item>Text &#8594; Morse</item>
+        <item>Vigenere</item>
+        <item>ROT13</item>
+        <item>Atbaš</item>
+        <item>Semafor</item>
+        <item>Námorné signálne vlajky a ich významy</item>
+        <item>Miešanie farieb</item>
+        <item>Abeceda</item>
+        <!--
+        <item>Frekvenčná analýza</item>
+        <item>Rímske čísla</item>
+        <item>Mobile &#8594; Text</item>
+        <item>Text &#8594; Mobile</item>
+        <item>ASCII</item>
+        <item>Kalendár</item>
+        <item>Ulice</item>
+        -->
+    </string-array>
+
+    <string name="translate">Prelož</string>
+    <string name="backspace">&#8592;</string>
+    <string name="clear">Zmaž</string>
+    <string name="text2braille">Text &#8594; Braille transformačná tabuľka</string>
+    <string name="morse_dot">.</string>
+    <string name="morse_dash">-</string>
+    <string name="morse_separator">/</string>
+    <string name="key">Kľúč</string>
+    <string name="message">Správa</string>
+    <string name="a0">A=0</string>
+    <string name="a1">A=1</string>
+    <string name="encode">Šifruj</string>
+    <string name="decode">Dešifruj</string>
+    <string name="invalid_vigenere_key">Kľuč musí obsahovať aspoň jedno písmeno.</string>
+    <string name="aditive_color_mixing">Aditívne miešanie farieb</string>
+    <string name="subtractive_color_mixing">Subtraktívne miešanie farieb</string>
+
+    <string-array name="flags_meaning">
+        <item>Pozor, potápač vo vode. Vyhnite sa plavidlu a plávajte pomaly.</item>
+        <item>Nakladám, vykladám alebo prevážam nebezpečný náklad.</item>
+        <item>Áno.</item>
+        <item>Nepribližujte sa ku mne, mám problémy s manévrovaním.</item>
+        <item>Mením kurz vpravo.</item>
+        <item>Mám haváriu, nadviažte so mnou spojenie.</item>
+        <item>Potrebujem lodivoda.</item>
+        <item>Mám na palube lodivoda.</item>
+        <item>Mením kurz vľavo.</item>
+        <item>Požiar a nebezpečný náklad na palube; nepribližujte sa ku mne, uniká nebezpečný náklad.</item>
+        <item>Komunikujte so mnou. Nadviažte komunikáciu.</item>
+        <item>Okamžite zastavte loď.</item>
+        <item>Moja loď stojí a nenapreduje.</item>
+        <item>Nie.</item>
+        <item>Muž cez palubu.</item>
+        <item>V prístave: Všetci na palubu, loď sa chystá vyplávať. Na mori: rybárske lode—Siete sa zachytili o prekážku.</item>
+        <item>Všetci na palube sú zdraví, žiadam o povolenie na pristátie/prieplav.</item>
+        <item>Plavebná dráha je mimo moju loď, môžete plávať okolo mňa.</item>
+        <item>Stroje spustené na spätný chod.</item>
+        <item>Vyhnite sa plavidlu, vlečenie siete v páre lodí.</item>
+        <item>Hrozí vám nebezpečenstvo.</item>
+        <item>Žiadam o pomoc.</item>
+        <item>Žiadam o lekársku pomoc.</item>
+        <item>Prerušte manéver a sledujte moje signály.</item>
+        <item>Vlečiem kotvu.</item>
+        <item>Žiadam o vlečnú loď.</item>
+    </string-array>
+    
+    <string-array name="phonetic_alphabet">
+        <item>Alfa</item>
+        <item>Bravo</item>
+        <item>Charlie</item>
+        <item>Delta</item>
+        <item>Echo</item>
+        <item>Foxtrot</item>
+        <item>Golf</item>
+        <item>Hotel</item>
+        <item>India</item>
+        <item>Juliet</item>
+        <item>Kilo</item>
+        <item>Lima</item>
+        <item>Mike</item>
+        <item>November</item>
+        <item>Oscar</item>
+        <item>Papa</item>
+        <item>Quebec</item>
+        <item>Romeo</item>
+        <item>Sierra</item>
+        <item>Tango</item>
+        <item>Uniform</item>
+        <item>Victor</item>
+        <item>Whiskey</item>
+        <item>X-Ray</item>
+        <item>Yankee</item>
+        <item>Zulu</item>
+    </string-array>
+    
+    <string name="semaphore_ready">Pokojový stav / Medzera</string>
+    
+    <string-array name="semaphore_description">
+        <item>@string/semaphore_ready</item>
+        <item>Čísla</item>
+        <item>Chyba / Pozor</item>
+        <item>Omyl</item>
+        <item>A / 1</item>
+        <item>B / 2</item>
+        <item>C / 3 / Potvrdenie</item>
+        <item>D / 4</item>
+        <item>E / 5</item>
+        <item>F / 6</item>
+        <item>G / 7</item>
+        <item>H / 8</item>
+        <item>I / 9</item>
+        <item>J / Písmená</item>
+        <item>K / 0 / Začiatok prenosu</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+
+</resources>
