@@ -17,14 +17,15 @@
 
             <com.lacike.ciphertools.MyCheckBox
                 android:id="@+id/braille1"
-                android:layout_width="@dimen/braille_input_size"
-                android:layout_height="@dimen/braille_input_size" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/braille_input_margin" />
 
             <com.lacike.ciphertools.MyCheckBox
                 android:id="@+id/braille2"
-                android:layout_width="@dimen/braille_input_size"
-                android:layout_height="@dimen/braille_input_size"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/braille_input_margin" />
         </LinearLayout>
 
         <LinearLayout
@@ -34,15 +35,15 @@
 
             <com.lacike.ciphertools.MyCheckBox
                 android:id="@+id/braille4"
-                android:layout_width="@dimen/braille_input_size"
-                android:layout_height="@dimen/braille_input_size"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/braille_input_margin" />
 
             <com.lacike.ciphertools.MyCheckBox
                 android:id="@+id/braille8"
-                android:layout_width="@dimen/braille_input_size"
-                android:layout_height="@dimen/braille_input_size"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/braille_input_margin" />
         </LinearLayout>
 
         <LinearLayout
@@ -52,15 +53,15 @@
 
             <com.lacike.ciphertools.MyCheckBox
                 android:id="@+id/braille16"
-                android:layout_width="@dimen/braille_input_size"
-                android:layout_height="@dimen/braille_input_size"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/braille_input_margin" />
 
             <com.lacike.ciphertools.MyCheckBox
                 android:id="@+id/braille32"
-                android:layout_width="@dimen/braille_input_size"
-                android:layout_height="@dimen/braille_input_size"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/braille_input_margin" />
         </LinearLayout>
     </LinearLayout>
 
@@ -68,8 +69,8 @@
         android:id="@+id/braille2text_output"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"
         android:layout_gravity="center"
+        android:layout_weight="1"
         android:text=""
         android:textSize="80sp" />
 

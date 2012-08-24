@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="braille_input_size">60dp</dimen>
+    <dimen name="braille_input_margin">5dp</dimen>
     <dimen name="morse_input_size">60dp</dimen>
     <dimen name="vigenere_input_size">50dp</dimen>
     <dimen name="substitution_input_size">70dp</dimen>
