@@ -1,5 +1,7 @@
 package com.lacike.ciphertools;
 
+import com.lacike.util.StringNormalizer;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -55,7 +57,8 @@ public class VigenereFragment extends Fragment {
 	protected void vigenere(View view) {
 		View rootView = view.getRootView();
 		EditText keyInput = (EditText) rootView.findViewById(R.id.vigenere_key);
-		String key = toUpperLetters(keyInput.getText().toString());
+		String key = StringNormalizer.toUpperLetters(keyInput.getText()
+				.toString());
 
 		if ((key == null) || (key.length() == 0)) {
 			Toast.makeText(getActivity(), R.string.invalid_vigenere_key,
@@ -66,7 +69,8 @@ public class VigenereFragment extends Fragment {
 
 		EditText messageInput = (EditText) rootView
 				.findViewById(R.id.vigenere_input);
-		String message = toUpperLetters(messageInput.getText().toString());
+		String message = StringNormalizer.toUpperLetters(messageInput.getText()
+				.toString());
 
 		// A==1?
 		int a = 0;
@@ -117,14 +121,6 @@ public class VigenereFragment extends Fragment {
 		}
 
 		return output.toString();
-	}
-
-	/**
-	 * Returns string transformed to upper case string containing only letters
-	 * ('A'-'Z').
-	 */
-	private String toUpperLetters(String str) {
-		return str.toUpperCase().replaceAll("[^A-Z]", "");
 	}
 
 	/**

@@ -15,9 +15,9 @@
         <item>Námorné signálne vlajky a ich významy</item>
         <item>Miešanie farieb</item>
         <item>Abeceda</item>
+        <item>Frekvenčná analýza</item>
         <item>Ulice</item>
         <!--
-        <item>Frekvenčná analýza</item>
         <item>Rímske čísla</item>
         <item>Mobile &#8594; Text</item>
         <item>Text &#8594; Mobile</item>
@@ -43,6 +43,15 @@
     <string name="invalid_vigenere_key">Kľuč musí obsahovať aspoň jedno písmeno.</string>
     <string name="aditive_color_mixing">Aditívne miešanie farieb</string>
     <string name="subtractive_color_mixing">Subtraktívne miešanie farieb</string>
+    <string name="letters">Písmená</string>
+    <string name="bigrams">Bigramy</string>
+    <string name="trigrams">Trigramy</string>
+    <string name="analyze">Analyzuj</string>
+     <plurals name="invalid_frequency_input">
+        <item quantity="one">Vstup musí obsahovať aspoň %1$d písmeno.</item>
+        <item quantity="few">Vstup musí obsahovať aspoň %1$d písmená.</item>
+        <item quantity="other">Vstup musí obsahovať aspoň %1$d písmená.</item>
+    </plurals>
 
     <string-array name="flags_meaning">
         <item>Pozor, potápač vo vode. Vyhnite sa plavidlu a plávajte pomaly.</item>

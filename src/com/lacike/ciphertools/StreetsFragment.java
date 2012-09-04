@@ -2,6 +2,8 @@ package com.lacike.ciphertools;
 
 import java.io.InputStream;
 
+import com.lacike.util.RegExpFileSearcher;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;

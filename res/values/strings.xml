@@ -15,9 +15,9 @@
         <item>Maritime signal flags with meaning</item>
         <item>Color mixing</item>
         <item>Alphabet</item>
+        <item>Frequency analysis</item>
         <item>Streets</item>
         <!--
-        <item>Frequency analysis</item>
         <item>Roman numbers</item>
         <item>Mobile to Text</item>
         <item>Text to Mobile</item>
@@ -43,6 +43,15 @@
     <string name="invalid_vigenere_key">Key must contain at least one letter.</string>
     <string name="aditive_color_mixing">Aditive color mixing</string>
     <string name="subtractive_color_mixing">Subtractive color mixing</string>
+    <string name="letters">Letters</string>
+    <string name="bigrams">Bigrams</string>
+    <string name="trigrams">Trigrams</string>
+    <string name="analyze">Analyze</string>
+
+    <plurals name="invalid_frequency_input">
+        <item quantity="one">Input must contain at least %1$d letter.</item>
+        <item quantity="other">Input must contain at least %1$d letters.</item>
+    </plurals>
 
     <string-array name="flags_meaning">
         <item>I have a diver down; keep well clear at slow speed.</item>
@@ -147,7 +156,7 @@ At sea: It may be used by fishing vessels to mean: "My nets have come fast upon 
         <item>Praha</item>
         <item>Zlín</item>
     </string-array>
-    
+
     <string name="file_error">Error while reading file %1$s.</string>
     <string name="pattern_syntax_error">Pattern syntax error:  %1$s.</string>
 

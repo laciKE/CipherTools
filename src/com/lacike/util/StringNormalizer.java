@@ -1,12 +1,10 @@
-package com.lacike.ciphertools;
+package com.lacike.util;
 
 import java.util.HashMap;
 import java.util.Map;
 
-
 /**
- * Removes accents from given string. Currently supports only Czech, Slovak and
- * some other Central European characters.
+ * Normalizes strings (converts to upperCase, removes accents).
  */
 public class StringNormalizer {
 
@@ -44,10 +42,11 @@ public class StringNormalizer {
 	};
 
 	/**
-	 * Normalizes string by removing accents.
+	 * Removes accents from given string. Currently supports only Czech, Slovak
+	 * and some other Central European characters.
 	 */
 	public static String normalize(String string) {
-		StringBuffer result = new StringBuffer(string);
+		StringBuilder result = new StringBuilder(string);
 		for (int i = 0; i < string.length(); i++) {
 			Character c = sNormalizationMap.get(result.charAt(i));
 			if (c != null) {
@@ -56,5 +55,13 @@ public class StringNormalizer {
 		}
 
 		return result.toString();
+	}
+
+	/**
+	 * Returns string transformed to upper case string containing only letters
+	 * ('A'-'Z').
+	 */
+	public static String toUpperLetters(String str) {
+		return str.toUpperCase().replaceAll("[^A-Z]", "");
 	}
 }

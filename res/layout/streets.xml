@@ -21,13 +21,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="textFilter" />
+            android:inputType="textFilter"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <Button
             android:id="@+id/streets_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/search" />
+            android:text="@string/search"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
     </LinearLayout>
 
     <LinearLayout

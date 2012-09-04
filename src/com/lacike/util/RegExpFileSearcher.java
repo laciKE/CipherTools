@@ -1,4 +1,4 @@
-package com.lacike.ciphertools;
+package com.lacike.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,6 +6,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.regex.PatternSyntaxException;
+
+import com.lacike.ciphertools.R;
 
 import android.content.Context;
 import android.content.res.Resources;
