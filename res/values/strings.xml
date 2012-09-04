@@ -15,6 +15,7 @@
         <item>Maritime signal flags with meaning</item>
         <item>Color mixing</item>
         <item>Alphabet</item>
+        <item>Streets</item>
         <!--
         <item>Frequency analysis</item>
         <item>Roman numbers</item>
@@ -22,10 +23,10 @@
         <item>Text to Mobile</item>
         <item>ASCII</item>
         <item>Calendar</item>
-        <item>Streets</item>
         -->
     </string-array>
 
+    <string name="search">Search</string>
     <string name="translate">Translate</string>
     <string name="backspace">Del</string>
     <string name="clear">Clear</string>
@@ -72,7 +73,6 @@ At sea: It may be used by fishing vessels to mean: "My nets have come fast upon 
         <item>I am dragging my anchor.</item>
         <item>I require a tug.</item>
     </string-array>
-    
     <string-array name="phonetic_alphabet">
         <item>Alfa</item>
         <item>Bravo</item>
@@ -101,9 +101,9 @@ At sea: It may be used by fishing vessels to mean: "My nets have come fast upon 
         <item>Yankee</item>
         <item>Zulu</item>
     </string-array>
-    
+
     <string name="semaphore_ready">Rest / Space</string>
-    
+
     <string-array name="semaphore_description">
         <item>@string/semaphore_ready</item>
         <item>Numerals</item>
@@ -136,5 +136,19 @@ At sea: It may be used by fishing vessels to mean: "My nets have come fast upon 
         <item>Y</item>
         <item>Z</item>
     </string-array>
+
+    <string name="cities_prompt">Choose a city</string>
+
+    <string-array name="cities">
+        <item>Bratislava</item>
+        <item>Brno</item>
+        <item>Košice</item>
+        <item>Ostrava</item>
+        <item>Praha</item>
+        <item>Zlín</item>
+    </string-array>
+    
+    <string name="file_error">Error while reading file %1$s.</string>
+    <string name="pattern_syntax_error">Pattern syntax error:  %1$s.</string>
 
 </resources>

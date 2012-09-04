@@ -15,6 +15,7 @@
         <item>Námorné signálne vlajky a ich významy</item>
         <item>Miešanie farieb</item>
         <item>Abeceda</item>
+        <item>Ulice</item>
         <!--
         <item>Frekvenčná analýza</item>
         <item>Rímske čísla</item>
@@ -22,10 +23,10 @@
         <item>Text &#8594; Mobile</item>
         <item>ASCII</item>
         <item>Kalendár</item>
-        <item>Ulice</item>
         -->
     </string-array>
 
+    <string name="search">Hľadaj</string>
     <string name="translate">Prelož</string>
     <string name="backspace">&#8592;</string>
     <string name="clear">Zmaž</string>
@@ -71,7 +72,6 @@
         <item>Vlečiem kotvu.</item>
         <item>Žiadam o vlečnú loď.</item>
     </string-array>
-    
     <string-array name="phonetic_alphabet">
         <item>Alfa</item>
         <item>Bravo</item>
@@ -100,9 +100,9 @@
         <item>Yankee</item>
         <item>Zulu</item>
     </string-array>
-    
+
     <string name="semaphore_ready">Pokojový stav / Medzera</string>
-    
+
     <string-array name="semaphore_description">
         <item>@string/semaphore_ready</item>
         <item>Čísla</item>
@@ -135,5 +135,19 @@
         <item>Y</item>
         <item>Z</item>
     </string-array>
+
+    <string name="cities_prompt">Zvoľ mesto</string>
+
+    <string-array name="cities">
+        <item>Bratislava</item>
+        <item>Brno</item>
+        <item>Košice</item>
+        <item>Ostrava</item>
+        <item>Praha</item>
+        <item>Zlín</item>
+    </string-array>
+    
+    <string name="file_error">Chyba pri čítaní súbora %1$s.</string>
+    <string name="pattern_syntax_error">Chybná syntax regulárneho výrazu:  %1$s.</string>
 
 </resources>

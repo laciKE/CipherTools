@@ -20,6 +20,7 @@ public class ToolFragmentFactory {
 			"com.lacike.ciphertools.FlagsMeaningFragment",
 			"com.lacike.ciphertools.ColorsFragment",
 			"com.lacike.ciphertools.AlphabetFragment",
+			"com.lacike.ciphertools.StreetsFragment"
 		};
 
 	/**

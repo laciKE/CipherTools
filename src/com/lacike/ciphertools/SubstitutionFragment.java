@@ -23,17 +23,17 @@ public abstract class SubstitutionFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.substitution, container, false);
 
-		View morseInput;
-		morseInput = view.findViewById(R.id.substitution_submit);
-		morseInput.setOnClickListener(new View.OnClickListener() {
+		View input;
+		input = view.findViewById(R.id.substitution_submit);
+		input.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				substitute(v);
 			}
 		});
 
-		morseInput = view.findViewById(R.id.substitution_clear);
-		morseInput.setOnClickListener(new View.OnClickListener() {
+		input = view.findViewById(R.id.substitution_clear);
+		input.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				clear(v);
