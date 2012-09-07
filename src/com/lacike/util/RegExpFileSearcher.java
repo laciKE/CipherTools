@@ -65,7 +65,7 @@ public class RegExpFileSearcher implements Runnable {
 			while ((line = inputStream.readLine()) != null) {
 				lineNumber++;
 
-				String normalizedLine = StringNormalizer.normalize(line);
+				String normalizedLine = StringNormalizer.normalize(line.toUpperCase());
 				try {
 					if (normalizedLine.matches(mRegExp)) {
 						results.add(line);

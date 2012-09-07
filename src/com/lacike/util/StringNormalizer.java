@@ -43,7 +43,7 @@ public class StringNormalizer {
 
 	/**
 	 * Removes accents from given string. Currently supports only Czech, Slovak
-	 * and some other Central European characters.
+	 * and some other Central European uppercase characters.
 	 */
 	public static String normalize(String string) {
 		StringBuilder result = new StringBuilder(string);
@@ -63,5 +63,12 @@ public class StringNormalizer {
 	 */
 	public static String toUpperLetters(String str) {
 		return str.toUpperCase().replaceAll("[^A-Z]", "");
+	}
+	
+	/**
+	 * Checks if string contains numbers.
+	 */
+	public static boolean containsNumbers(String str) {
+		return str.matches(".*[0-9].*");
 	}
 }

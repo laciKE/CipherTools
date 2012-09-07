@@ -16,13 +16,13 @@
         <item>Color mixing</item>
         <item>Alphabet</item>
         <item>Frequency analysis</item>
+        <item>Calendar</item>
         <item>Streets</item>
         <!--
         <item>Roman numbers</item>
         <item>Mobile to Text</item>
         <item>Text to Mobile</item>
         <item>ASCII</item>
-        <item>Calendar</item>
         -->
     </string-array>
 
@@ -157,6 +157,13 @@ At sea: It may be used by fishing vessels to mean: "My nets have come fast upon 
         <item>Zlín</item>
     </string-array>
 
+    <string name="calendar_prompt">Choose a calendar</string>
+
+    <string-array name="calendars">
+		<item>Czech</item>
+        <item>Slovak</item>
+    </string-array>
+    
     <string name="file_error">Error while reading file %1$s.</string>
     <string name="pattern_syntax_error">Pattern syntax error:  %1$s.</string>
 

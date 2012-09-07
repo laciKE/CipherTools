@@ -7,7 +7,6 @@ import com.lacike.util.RegExpFileSearcher;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,7 +62,6 @@ public class StreetsFragment extends Fragment {
 	 */
 	protected void searchStreets(View view) {
 		View rootView = view.getRootView();
-		Log.d("STREETS", "click on search button");
 
 		ProgressBar progressBar = (ProgressBar) rootView
 				.findViewById(R.id.streets_progress_bar);

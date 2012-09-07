@@ -16,13 +16,13 @@
         <item>Miešanie farieb</item>
         <item>Abeceda</item>
         <item>Frekvenčná analýza</item>
+        <item>Kalendár</item>
         <item>Ulice</item>
         <!--
         <item>Rímske čísla</item>
         <item>Mobile &#8594; Text</item>
         <item>Text &#8594; Mobile</item>
         <item>ASCII</item>
-        <item>Kalendár</item>
         -->
     </string-array>
 
@@ -47,7 +47,8 @@
     <string name="bigrams">Bigramy</string>
     <string name="trigrams">Trigramy</string>
     <string name="analyze">Analyzuj</string>
-     <plurals name="invalid_frequency_input">
+
+    <plurals name="invalid_frequency_input">
         <item quantity="one">Vstup musí obsahovať aspoň %1$d písmeno.</item>
         <item quantity="few">Vstup musí obsahovať aspoň %1$d písmená.</item>
         <item quantity="other">Vstup musí obsahovať aspoň %1$d písmená.</item>
@@ -155,7 +156,14 @@
         <item>Praha</item>
         <item>Zlín</item>
     </string-array>
-    
+
+    <string name="calendars_prompt">Zvoľ kalendár</string>
+
+    <string-array name="calendars">
+        <item>český</item>
+        <item>slovenský</item>
+    </string-array>
+
     <string name="file_error">Chyba pri čítaní súbora %1$s.</string>
     <string name="pattern_syntax_error">Chybná syntax regulárneho výrazu:  %1$s.</string>
 

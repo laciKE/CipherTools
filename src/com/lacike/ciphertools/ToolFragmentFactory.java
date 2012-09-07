@@ -21,6 +21,7 @@ public class ToolFragmentFactory {
 			"com.lacike.ciphertools.ColorsFragment",
 			"com.lacike.ciphertools.AlphabetFragment",
 			"com.lacike.ciphertools.FrequencyAnalysisFragment",
+			"com.lacike.ciphertools.CalendarFragment",
 			"com.lacike.ciphertools.StreetsFragment"
 		};
 
