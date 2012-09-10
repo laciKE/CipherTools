@@ -1,5 +1,7 @@
 package com.lacike.ciphertools;
 
+import com.lacike.util.SharedBundle;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -23,24 +25,44 @@ public abstract class SubstitutionFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.substitution, container, false);
 
-		View input;
-		input = view.findViewById(R.id.substitution_submit);
-		input.setOnClickListener(new View.OnClickListener() {
+		View button;
+		button = view.findViewById(R.id.substitution_submit);
+		button.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				substitute(v);
 			}
 		});
 
-		input = view.findViewById(R.id.substitution_clear);
-		input.setOnClickListener(new View.OnClickListener() {
+		button = view.findViewById(R.id.substitution_clear);
+		button.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				clear(v);
 			}
 		});
+		
+		Bundle sharedBundle = SharedBundle.getInstance();
+		String message = sharedBundle.getString(ToolActivity.MESSAGE);
+		if (message != null) {
+			EditText input = (EditText) view.findViewById(R.id.substitution_input);
+			input.setText(message);
+		}
 
 		return view;
+	}
+	
+	/**
+	 * Saves current regExp to SharedBundle.
+	 */
+	@Override
+	public void onDestroyView() {
+		Bundle sharedBundle = SharedBundle.getInstance();
+		EditText input = (EditText) getActivity().findViewById(
+				R.id.substitution_input);
+		sharedBundle.putString(ToolActivity.MESSAGE, input.getText().toString());
+
+		super.onDestroyView();
 	}
 
 	/**

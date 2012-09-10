@@ -1,5 +1,6 @@
 package com.lacike.ciphertools;
 
+import com.lacike.util.SharedBundle;
 import com.lacike.util.StringNormalizer;
 
 import android.os.Bundle;
@@ -31,24 +32,44 @@ public class VigenereFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.vigenere, container, false);
 
-		View vigenereInput;
-		vigenereInput = view.findViewById(R.id.vigenere_clear);
-		vigenereInput.setOnClickListener(new View.OnClickListener() {
+		View vigenereButton;
+		vigenereButton = view.findViewById(R.id.vigenere_clear);
+		vigenereButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				clear(v);
 			}
 		});
 
-		vigenereInput = view.findViewById(R.id.vigenere_submit);
-		vigenereInput.setOnClickListener(new View.OnClickListener() {
+		vigenereButton = view.findViewById(R.id.vigenere_submit);
+		vigenereButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				vigenere(v);
 			}
 		});
+		
+		Bundle sharedBundle = SharedBundle.getInstance();
+		String message = sharedBundle.getString(ToolActivity.MESSAGE);
+		if (message != null) {
+			EditText vigenereInput = (EditText) view.findViewById(R.id.vigenere_input);
+			vigenereInput.setText(message);
+		}
 
 		return view;
+	}
+	
+	/**
+	 * Saves current regExp to SharedBundle.
+	 */
+	@Override
+	public void onDestroyView() {
+		Bundle sharedBundle = SharedBundle.getInstance();
+		EditText vigenereInput = (EditText) getActivity().findViewById(
+				R.id.vigenere_input);
+		sharedBundle.putString(ToolActivity.MESSAGE, vigenereInput.getText().toString());
+
+		super.onDestroyView();
 	}
 
 	/**

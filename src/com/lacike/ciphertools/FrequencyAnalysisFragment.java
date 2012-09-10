@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 import com.lacike.util.Pair;
+import com.lacike.util.SharedBundle;
 import com.lacike.util.StringNormalizer;
 
 import android.content.Context;
@@ -47,24 +48,44 @@ public class FrequencyAnalysisFragment extends Fragment {
 		View view = inflater.inflate(R.layout.frequency_analysis, container,
 				false);
 
-		View frequencyInput;
-		frequencyInput = view.findViewById(R.id.frequency_clear);
-		frequencyInput.setOnClickListener(new View.OnClickListener() {
+		View frequencyButton;
+		frequencyButton = view.findViewById(R.id.frequency_clear);
+		frequencyButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				clear(v);
 			}
 		});
 
-		frequencyInput = view.findViewById(R.id.frequency_submit);
-		frequencyInput.setOnClickListener(new View.OnClickListener() {
+		frequencyButton = view.findViewById(R.id.frequency_submit);
+		frequencyButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				analyze(v);
 			}
 		});
+		
+		Bundle sharedBundle = SharedBundle.getInstance();
+		String message = sharedBundle.getString(ToolActivity.MESSAGE);
+		if (message != null) {
+			EditText frequencyInput = (EditText) view.findViewById(R.id.frequency_input);
+			frequencyInput.setText(message);
+		}
 
 		return view;
+	}
+	
+	/**
+	 * Saves current regExp to SharedBundle.
+	 */
+	@Override
+	public void onDestroyView() {
+		Bundle sharedBundle = SharedBundle.getInstance();
+		EditText frequencyInput = (EditText) getActivity().findViewById(
+				R.id.frequency_input);
+		sharedBundle.putString(ToolActivity.MESSAGE, frequencyInput.getText().toString());
+
+		super.onDestroyView();
 	}
 
 	/**

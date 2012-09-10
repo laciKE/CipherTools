@@ -1,5 +1,7 @@
 package com.lacike.ciphertools;
 
+import com.lacike.util.SharedBundle;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -35,27 +37,44 @@ public class Text2MorseFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.text2morse, container, false);
 
-		View morseInput;
-		morseInput = view.findViewById(R.id.text2morse_submit);
-		morseInput.setOnClickListener(new View.OnClickListener() {
+		View morseButton;
+		morseButton = view.findViewById(R.id.text2morse_submit);
+		morseButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				text2morse(v);
 			}
 		});
 
-		morseInput = view.findViewById(R.id.text2morse_clear);
-		morseInput.setOnClickListener(new View.OnClickListener() {
+		morseButton = view.findViewById(R.id.text2morse_clear);
+		morseButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				clear(v);
 			}
 		});
-
-		// view.findViewById(R.id.morse2text_input).setEnabled(false);
-		// view.findViewById(R.id.morse2text_output).setEnabled(false);
+	
+		Bundle sharedBundle = SharedBundle.getInstance();
+		String message = sharedBundle.getString(ToolActivity.MESSAGE);
+		if (message != null) {
+			EditText morseInput = (EditText) view.findViewById(R.id.text2morse_input);
+			morseInput.setText(message);
+		}
 
 		return view;
+	}
+	
+	/**
+	 * Saves current regExp to SharedBundle.
+	 */
+	@Override
+	public void onDestroyView() {
+		Bundle sharedBundle = SharedBundle.getInstance();
+		EditText morseInput = (EditText) getActivity().findViewById(
+				R.id.text2morse_input);
+		sharedBundle.putString(ToolActivity.MESSAGE, morseInput.getText().toString());
+
+		super.onDestroyView();
 	}
 
 	/**

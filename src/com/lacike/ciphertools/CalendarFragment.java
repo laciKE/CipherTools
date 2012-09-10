@@ -3,6 +3,7 @@ package com.lacike.ciphertools;
 import java.io.InputStream;
 
 import com.lacike.util.RegExpFileSearcher;
+import com.lacike.util.SharedBundle;
 import com.lacike.util.StringNormalizer;
 
 import android.os.Bundle;
@@ -45,14 +46,21 @@ public class CalendarFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.calendar, container, false);
 
-		View input;
-		input = view.findViewById(R.id.calendar_submit);
-		input.setOnClickListener(new View.OnClickListener() {
+		View button;
+		button = view.findViewById(R.id.calendar_submit);
+		button.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				searchNames(v);
 			}
 		});
+		
+		Bundle sharedBundle = SharedBundle.getInstance();
+		String regExp = sharedBundle.getString(ToolActivity.REGEXP);
+		if (regExp != null) {
+			EditText input = (EditText) view.findViewById(R.id.calendar_input);
+			input.setText(regExp);
+		}
 
 		return view;
 	}
@@ -95,5 +103,18 @@ public class CalendarFragment extends Fragment {
 				inputStream);
 
 		new Thread(searcher).start();
+	}
+	
+	/**
+	 * Saves current regExp to SharedBundle.
+	 */
+	@Override
+	public void onDestroyView() {
+		Bundle sharedBundle = SharedBundle.getInstance();
+		EditText input = (EditText) getActivity().findViewById(
+				R.id.calendar_input);
+		sharedBundle.putString(ToolActivity.REGEXP, input.getText().toString());
+
+		super.onDestroyView();
 	}
 }

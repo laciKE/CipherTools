@@ -3,6 +3,7 @@ package com.lacike.ciphertools;
 import java.io.InputStream;
 
 import com.lacike.util.RegExpFileSearcher;
+import com.lacike.util.SharedBundle;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -27,7 +28,6 @@ public class StreetsFragment extends Fragment {
 		return new StreetsFragment();
 	}
 
-	
 	/**
 	 * Ids of files with streets.
 	 */
@@ -45,14 +45,21 @@ public class StreetsFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.streets, container, false);
 
-		View input;
-		input = view.findViewById(R.id.streets_submit);
-		input.setOnClickListener(new View.OnClickListener() {
+		View button;
+		button = view.findViewById(R.id.streets_submit);
+		button.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				searchStreets(v);
 			}
 		});
+
+		Bundle sharedBundle = SharedBundle.getInstance();
+		String regExp = sharedBundle.getString(ToolActivity.REGEXP);
+		if (regExp != null) {
+			EditText input = (EditText) view.findViewById(R.id.streets_input);
+			input.setText(regExp);
+		}
 
 		return view;
 	}
@@ -65,7 +72,7 @@ public class StreetsFragment extends Fragment {
 
 		ProgressBar progressBar = (ProgressBar) rootView
 				.findViewById(R.id.streets_progress_bar);
-		
+
 		if (progressBar.getVisibility() == ProgressBar.VISIBLE) {
 			return;
 		}
@@ -85,5 +92,18 @@ public class StreetsFragment extends Fragment {
 				inputStream);
 
 		new Thread(searcher).start();
+	}
+	
+	/**
+	 * Saves current regExp to SharedBundle.
+	 */
+	@Override
+	public void onDestroyView() {
+		Bundle sharedBundle = SharedBundle.getInstance();
+		EditText input = (EditText) getActivity().findViewById(
+				R.id.streets_input);
+		sharedBundle.putString(ToolActivity.REGEXP, input.getText().toString());
+
+		super.onDestroyView();
 	}
 }

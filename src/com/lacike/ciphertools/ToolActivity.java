@@ -14,6 +14,12 @@ import android.support.v4.app.FragmentActivity;
 public class ToolActivity extends FragmentActivity {
 	public static final String INDEX = "index";
 	public static final String LABEL = "label";
+	
+	/**
+	 * Names of shared fields in SharedBundle.
+	 */
+	public static final String REGEXP = "regexp";
+	public static final String MESSAGE = "message";
 
 	/**
 	 * Checks dual pane mode, creates fragment for tool, sets activity's title
