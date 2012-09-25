@@ -1,7 +1,6 @@
 package com.lacike.ciphertools;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,7 +10,7 @@ import android.widget.TextView;
 /**
  * Creates fragment for Braille2Text conversion
  */
-public class Braille2TextFragment extends Fragment {
+public class Braille2TextFragment extends BaseFragment {
 
 	public static Braille2TextFragment newInstance() {
 		return new Braille2TextFragment();
@@ -33,7 +32,7 @@ public class Braille2TextFragment extends Fragment {
 			"M", "", "L", "S", "P", "", "O", "", "N", "", "R", "T", "Q", "",
 			"", "", "", "", "", "", "", "", "", "", "", "", "", "W", "", "",
 			"U", "", "X", "", "V", "", "", "", "Z", "", "Y", "", "W", "", "" };
-
+	
 	/**
 	 * Returns view for {@link Braille2TextFragment} and sets
 	 * {@link OnClickListener} for each input
@@ -41,6 +40,8 @@ public class Braille2TextFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		setHelpMessage(R.string.help_braille2text);
+		
 		View view = inflater.inflate(R.layout.braille2text, container, false);
 
 		View brailleInput;
@@ -53,7 +54,7 @@ public class Braille2TextFragment extends Fragment {
 				}
 			});
 		}
-
+		
 		return view;
 	}
 

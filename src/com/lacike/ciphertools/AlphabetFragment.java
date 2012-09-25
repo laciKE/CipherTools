@@ -3,7 +3,6 @@ package com.lacike.ciphertools;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -17,7 +16,7 @@ import android.widget.TextView;
 /**
  * Creates fragment for Alphabet
  */
-public class AlphabetFragment extends Fragment {
+public class AlphabetFragment extends BaseFragment {
 
 	public static AlphabetFragment newInstance() {
 		return new AlphabetFragment();
@@ -29,6 +28,9 @@ public class AlphabetFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		
+		setHelpMessage(R.string.help_alphabet);
+		
 		View view = inflater.inflate(R.layout.alphabet, container, false);
 
 		Context context = getActivity();

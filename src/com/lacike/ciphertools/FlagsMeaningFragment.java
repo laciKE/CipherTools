@@ -2,7 +2,6 @@ package com.lacike.ciphertools;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -16,7 +15,7 @@ import android.widget.TextView;
 /**
  * Creates fragment for Flags with their meanings
  */
-public class FlagsMeaningFragment extends Fragment {
+public class FlagsMeaningFragment extends BaseFragment {
 
 	public static FlagsMeaningFragment newInstance() {
 		return new FlagsMeaningFragment();
@@ -28,6 +27,8 @@ public class FlagsMeaningFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		setHelpMessage(R.string.help_flags_meaning);
+		
 		View view = inflater.inflate(R.layout.flags_meaning, container, false);
 
 		Context context = getActivity();

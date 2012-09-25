@@ -1,7 +1,6 @@
 package com.lacike.ciphertools;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +8,7 @@ import android.view.ViewGroup;
 /**
  * Creates fragment for Colors
  */
-public class ColorsFragment extends Fragment {
+public class ColorsFragment extends BaseFragment {
 
 	public static ColorsFragment newInstance() {
 		return new ColorsFragment();
@@ -21,6 +20,8 @@ public class ColorsFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		setHelpMessage(R.string.help_colors);
+		
 		View view = inflater.inflate(R.layout.colors, container, false);
 
 		return view;

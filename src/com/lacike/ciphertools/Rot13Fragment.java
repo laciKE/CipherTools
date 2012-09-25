@@ -1,5 +1,10 @@
 package com.lacike.ciphertools;
 
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 /**
  * Creates fragment Rot13 substitution.
  */
@@ -9,6 +14,16 @@ public class Rot13Fragment extends SubstitutionFragment {
 		return new Rot13Fragment();
 	}
 
+	/**
+	 * Returns view for {@link AtbashFragment} and sets help message.
+	 */
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		setHelpMessage(R.string.help_rot13);
+		return super.onCreateView(inflater, container, savedInstanceState);
+	}
+	
 	/**
 	 * Substitutes letter using Rot13. Each letter rotetes by 13 places.
 	 */

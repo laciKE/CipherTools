@@ -2,6 +2,10 @@
 
     <string name="app_name">Cipher tools</string>
     <string name="title_activity_main">Cipher tools</string>
+    <string name="help">Help</string>
+    <string name="preferences">Preferences</string>
+    <string name="about">About</string>
+    <string name="about_message">Cipher tools is collection of useful tools for encode and decode basic ciphers.\nPrimary purpose of this application is help to participants of cipher\'s games.\n\nAuthor: Ladislav Baco</string>
 
     <string-array name="tools">
         <item>Braille to Text</item>
@@ -26,6 +30,7 @@
         -->
     </string-array>
 
+    <string name="ok">OK</string>
     <string name="search">Search</string>
     <string name="translate">Translate</string>
     <string name="backspace">Del</string>
@@ -160,10 +165,10 @@ At sea: It may be used by fishing vessels to mean: "My nets have come fast upon 
     <string name="calendar_prompt">Choose a calendar</string>
 
     <string-array name="calendars">
-		<item>Czech</item>
+        <item>Czech</item>
         <item>Slovak</item>
     </string-array>
-    
+
     <string name="file_error">Error while reading file %1$s.</string>
     <string name="pattern_syntax_error">Pattern syntax error:  %1$s.</string>
 

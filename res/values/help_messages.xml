@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="help_general">Select tool from list.</string>
+    <string name="help_alphabet">Table contains:\n order of letter in alphabet,\n letter,\n code in phonetic alphabet,\n morse code,\n semaphore signal,\n braille code,\n maritime signal flag.</string>
+    <string name="help_atbash">Decodes and encodes given text using Atbash cipher.\nSubstitution:\nA &#8596; Z\nB &#8596; Y\nC &#8596; X\nD &#8596; W\n&#8230;</string>
+    <string name="help_braille2text">Tap dots to display letter.</string>
+    <string name="help_calendar">Search names and dates in calendar by regular expressions, e.g:\n\".9\" &#8594; day ended in 9 in every month\n\" 9\" &#8594; 9th day in every month\n\"19\" &#8594; 19th day in every month\n\"d.r\" &#8594; names with pattern d.r\n\".o[nr]\" &#8594; names with pattern .o[nr]\n\nPatterns ignors accents and they are not case sensitive.</string>
+	<string name="help_colors">Aditive and subtractive color mixing.</string>
+	<string name="help_flags_meaning">Maritime signal flags with their meaning and letters.</string>
+	<string name="help_frequency_analysis">Analyze given text. Counts frequency of letters, bigrams and trigrams.</string>
+	<string name="help_morse2text">Decode given string in morse code to plain text.\n/ is a separator, Del removes last character.</string>
+    <string name="help_rot13">Decodes and encodes given text using ROT13 cipher.\nSubstitution:\ncycle by 13 places, e.g\nA &#8596; N\nB &#8596; O\nC &#8596; P\n&#8230;</string>
+    <string name="help_semaphore">Tap dots on border of image to display letter. Figure is determined from two last selected dots.</string>
+    <string name="help_streets">Search streets in choosen city by regular expression. Patterns ignors accents and they are not case sensitive.</string>
+    <string name="help_text2braille">Table for simple conversion from letters to braille signs.</string>
+    <string name="help_text2morse">Encode given plain text to morse code.</string>
+    <string name="help_vigenere">Encode and decode text using Vigenere cipher in alphabet with numbering letters from 0 or 1.</string>
+
+</resources>

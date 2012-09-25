@@ -2,12 +2,11 @@ package com.lacike.ciphertools;
 
 import java.io.InputStream;
 
-import com.lacike.util.RegExpFileSearcher;
-import com.lacike.util.SharedBundle;
+import com.lacike.ciphertools.util.RegExpFileSearcher;
+import com.lacike.ciphertools.util.SharedBundle;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +21,7 @@ import android.widget.TextView;
 /**
  * Creates fragment for Streets.
  */
-public class StreetsFragment extends Fragment {
+public class StreetsFragment extends BaseFragment {
 
 	public static StreetsFragment newInstance() {
 		return new StreetsFragment();
@@ -43,6 +42,8 @@ public class StreetsFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		setHelpMessage(R.string.help_streets);
+		
 		View view = inflater.inflate(R.layout.streets, container, false);
 
 		View button;

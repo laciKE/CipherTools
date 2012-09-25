@@ -1,9 +1,8 @@
 package com.lacike.ciphertools;
 
-import com.lacike.util.SharedBundle;
+import com.lacike.ciphertools.util.SharedBundle;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,7 @@ import android.widget.EditText;
 /**
  * Creates fragment for simple substitution (like Rot13, Atbash,...)
  */
-public abstract class SubstitutionFragment extends Fragment {
+public abstract class SubstitutionFragment extends BaseFragment {
 
 	/**
 	 * Returns view for {@link SubstitutionFragment} and sets {@link OnClickListener}

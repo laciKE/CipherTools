@@ -1,5 +1,10 @@
 package com.lacike.ciphertools;
 
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 /**
  * Creates fragment for Atbash substitution.
  */
@@ -7,6 +12,16 @@ public class AtbashFragment extends SubstitutionFragment {
 
 	public static AtbashFragment newInstance() {
 		return new AtbashFragment();
+	}
+
+	/**
+	 * Returns view for {@link AtbashFragment} and sets help message.
+	 */
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		setHelpMessage(R.string.help_atbash);
+		return super.onCreateView(inflater, container, savedInstanceState);
 	}
 
 	/**

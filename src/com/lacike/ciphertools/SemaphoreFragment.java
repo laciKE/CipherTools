@@ -1,7 +1,6 @@
 package com.lacike.ciphertools;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +13,7 @@ import android.widget.TextView;
 /**
  * Creates fragment for semaphore alphabet
  */
-public class SemaphoreFragment extends Fragment {
+public class SemaphoreFragment extends BaseFragment {
 
 	public static SemaphoreFragment newInstance() {
 		return new SemaphoreFragment();
@@ -84,6 +83,8 @@ public class SemaphoreFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		setHelpMessage(R.string.help_semaphore);
+		
 		View view = inflater.inflate(R.layout.semaphore, container, false);
 
 		mSemaphoreDesctiption = getResources().getStringArray(

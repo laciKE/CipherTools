@@ -1,10 +1,9 @@
 package com.lacike.ciphertools;
 
-import com.lacike.util.SharedBundle;
-import com.lacike.util.StringNormalizer;
+import com.lacike.ciphertools.util.SharedBundle;
+import com.lacike.ciphertools.util.StringNormalizer;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +16,7 @@ import android.widget.Toast;
 /**
  * Creates fragment for Vigenere cipher
  */
-public class VigenereFragment extends Fragment {
+public class VigenereFragment extends BaseFragment {
 
 	public static VigenereFragment newInstance() {
 		return new VigenereFragment();
@@ -30,6 +29,8 @@ public class VigenereFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		setHelpMessage(R.string.help_vigenere);
+		
 		View view = inflater.inflate(R.layout.vigenere, container, false);
 
 		View vigenereButton;

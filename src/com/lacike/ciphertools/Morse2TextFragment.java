@@ -1,7 +1,6 @@
 package com.lacike.ciphertools;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,7 +11,7 @@ import android.widget.EditText;
 /**
  * Creates fragment for Morse2Text conversion
  */
-public class Morse2TextFragment extends Fragment {
+public class Morse2TextFragment extends BaseFragment {
 
 	public static Morse2TextFragment newInstance() {
 		return new Morse2TextFragment();
@@ -34,6 +33,8 @@ public class Morse2TextFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		setHelpMessage(R.string.help_morse2text);
+		
 		View view = inflater.inflate(R.layout.morse2text, container, false);
 
 		View morseInput;

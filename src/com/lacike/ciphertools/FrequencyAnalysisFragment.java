@@ -7,15 +7,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import com.lacike.util.Pair;
-import com.lacike.util.SharedBundle;
-import com.lacike.util.StringNormalizer;
+import com.lacike.ciphertools.util.Pair;
+import com.lacike.ciphertools.util.SharedBundle;
+import com.lacike.ciphertools.util.StringNormalizer;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +31,7 @@ import android.widget.TextView;
 /**
  * Creates fragment for frequency analysis.
  */
-public class FrequencyAnalysisFragment extends Fragment {
+public class FrequencyAnalysisFragment extends BaseFragment {
 
 	public static FrequencyAnalysisFragment newInstance() {
 		return new FrequencyAnalysisFragment();
@@ -45,6 +44,8 @@ public class FrequencyAnalysisFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		setHelpMessage(R.string.help_frequency_analysis);
+		
 		View view = inflater.inflate(R.layout.frequency_analysis, container,
 				false);
 
