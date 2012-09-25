@@ -66,7 +66,7 @@ public class VigenereFragment extends BaseFragment {
 	@Override
 	public void onDestroyView() {
 		Bundle sharedBundle = SharedBundle.getInstance();
-		EditText vigenereInput = (EditText) getActivity().findViewById(
+		EditText vigenereInput = (EditText) getView().findViewById(
 				R.id.vigenere_input);
 		sharedBundle.putString(ToolActivity.MESSAGE, vigenereInput.getText().toString());
 

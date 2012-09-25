@@ -57,7 +57,7 @@ public abstract class SubstitutionFragment extends BaseFragment {
 	@Override
 	public void onDestroyView() {
 		Bundle sharedBundle = SharedBundle.getInstance();
-		EditText input = (EditText) getActivity().findViewById(
+		EditText input = (EditText) getView().findViewById(
 				R.id.substitution_input);
 		sharedBundle.putString(ToolActivity.MESSAGE, input.getText().toString());
 

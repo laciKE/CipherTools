@@ -15,7 +15,7 @@ public class Rot13Fragment extends SubstitutionFragment {
 	}
 
 	/**
-	 * Returns view for {@link AtbashFragment} and sets help message.
+	 * Returns view for {@link Rot13Fragment} and sets help message.
 	 */
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,7 +25,7 @@ public class Rot13Fragment extends SubstitutionFragment {
 	}
 	
 	/**
-	 * Substitutes letter using Rot13. Each letter rotetes by 13 places.
+	 * Substitutes letter using Rot13. Each letter rotates by 13 places.
 	 */
 	@Override
 	protected char substituteLetter(char c) {

@@ -82,7 +82,7 @@ public class FrequencyAnalysisFragment extends BaseFragment {
 	@Override
 	public void onDestroyView() {
 		Bundle sharedBundle = SharedBundle.getInstance();
-		EditText frequencyInput = (EditText) getActivity().findViewById(
+		EditText frequencyInput = (EditText) getView().findViewById(
 				R.id.frequency_input);
 		sharedBundle.putString(ToolActivity.MESSAGE, frequencyInput.getText().toString());
 

@@ -71,7 +71,7 @@ public class Text2MorseFragment extends BaseFragment {
 	@Override
 	public void onDestroyView() {
 		Bundle sharedBundle = SharedBundle.getInstance();
-		EditText morseInput = (EditText) getActivity().findViewById(
+		EditText morseInput = (EditText) getView().findViewById(
 				R.id.text2morse_input);
 		sharedBundle.putString(ToolActivity.MESSAGE, morseInput.getText().toString());
 

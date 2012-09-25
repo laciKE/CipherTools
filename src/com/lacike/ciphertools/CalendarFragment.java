@@ -112,7 +112,7 @@ public class CalendarFragment extends BaseFragment {
 	@Override
 	public void onDestroyView() {
 		Bundle sharedBundle = SharedBundle.getInstance();
-		EditText input = (EditText) getActivity().findViewById(
+		EditText input = (EditText) getView().findViewById(
 				R.id.calendar_input);
 		sharedBundle.putString(ToolActivity.REGEXP, input.getText().toString());
 
