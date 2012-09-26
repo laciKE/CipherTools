@@ -2,7 +2,11 @@ package com.lacike.ciphertools;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
@@ -16,18 +20,24 @@ import android.view.MenuItem;
  * available tools, onItemSelected shows concrete tool.
  */
 public class MainActivity extends FragmentActivity implements
-		ToolsFragment.OnItemSelectedListener {
+		OnSharedPreferenceChangeListener, ToolsFragment.OnItemSelectedListener {
 
 	public static final String INDEX = "mIndex";
 
-	private boolean mDualPane;
+	private boolean mSharedPreferenceChanged = false;
+	private boolean mDualPane = false;
 	private int mIndex = -1;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		TypedArray themes = getResources().obtainTypedArray(R.array.themes_id);
+		int themeId = themes.getResourceId(SettingsActivity.getTheme(this),
+				R.style.AppTheme);
+		setTheme(themeId);
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tools);
-		// setContentView(R.layout.braille2text);
+
 		mDualPane = (findViewById(R.id.tool_frame) != null);
 
 		if (savedInstanceState != null) {
@@ -46,6 +56,23 @@ public class MainActivity extends FragmentActivity implements
 				fragmentTransaction.commit();
 			}
 			mIndex = -1;
+		}
+
+		SharedPreferences sharedPreferences = PreferenceManager
+				.getDefaultSharedPreferences(this);
+		sharedPreferences.registerOnSharedPreferenceChangeListener(this);
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		if (mSharedPreferenceChanged) {
+			mSharedPreferenceChanged = false;
+			Intent intent = getBaseContext().getPackageManager()
+					.getLaunchIntentForPackage(
+							getBaseContext().getPackageName());
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(intent);
 		}
 	}
 
@@ -101,9 +128,11 @@ public class MainActivity extends FragmentActivity implements
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle item selection
 		switch (item.getItemId()) {
-		/*
-		 * case R.id.menu_preferences: // showPreferences(); return true;
-		 */case R.id.menu_about:
+
+		case R.id.menu_preferences:
+			showPreferences();
+			return true;
+		case R.id.menu_about:
 			showMessageDialog(R.string.about, R.string.about_message);
 			return true;
 			/*
@@ -126,5 +155,18 @@ public class MainActivity extends FragmentActivity implements
 		dialog.setMessage(message);
 		dialog.setPositiveButton(R.string.ok, null);
 		dialog.show();
+	}
+
+	protected void showPreferences() {
+		Intent intent = new Intent(this, SettingsActivity.class);
+		startActivity(intent);
+	}
+
+	@Override
+	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
+			String key) {
+		if (key.equals(SettingsActivity.THEME)) {
+			mSharedPreferenceChanged = true;
+		}
 	}
 }

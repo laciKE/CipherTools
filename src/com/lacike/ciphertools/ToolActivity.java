@@ -2,6 +2,7 @@ package com.lacike.ciphertools;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -26,6 +27,10 @@ public class ToolActivity extends FragmentActivity {
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		TypedArray themes = getResources().obtainTypedArray(R.array.themes_id);
+		int themeId = themes.getResourceId(SettingsActivity.getTheme(this), R.style.AppTheme);
+		setTheme(themeId);
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tool_activity);
 

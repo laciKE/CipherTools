@@ -1,5 +1,27 @@
 <resources>
 
-    <style name="AppTheme" parent="android:Theme" />
+    <style name="DarkTheme" parent="android:Theme" />
+
+    <style name="LightTheme" parent="android:Theme.Light" />
+
+    <style name="WallpaperTheme" parent="android:Theme.Wallpaper" />
+
+    <style name="TranslucentTheme" parent="android:Theme.Translucent" />
+
+    <style name="AppTheme" parent="DarkTheme" />
+    
+    <array name="themes_id">
+        <item>@style/DarkTheme</item>
+        <item>@style/LightTheme</item>
+        <item>@style/WallpaperTheme</item>
+        <item>@style/TranslucentTheme</item>
+    </array>
+    
+    <string-array name="themes_index">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
 
 </resources>
