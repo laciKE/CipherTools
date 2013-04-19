@@ -2,7 +2,12 @@
 
     <string name="app_name">Šifrovacie pomôcky</string>
     <string name="title_activity_main">Šifrovacie pomôcky</string>
-
+    <string name="help">Pomoc</string>
+    <string name="settings">Nastavenia</string>
+    <string name="about">O aplikácii</string>
+    <string name="about_message">Šifrovacie pomôcky sú sadou užitočných nástrojov pre šifrovanie a dešifrovanie jednoduchých šifier.\nPrimárny cieľ tejto aplikácie je pomáhať účastníkom šifrovačiek.\n\nAutor: Ladislav Bačo</string>
+    <string name="app_theme">Téma aplikácie</string>
+    
     <string-array name="tools">
         <item>Braille &#8594; Text</item>
         <item>Text &#8594; Braille</item>
@@ -24,6 +29,13 @@
         <item>Text &#8594; Mobile</item>
         <item>ASCII</item>
         -->
+    </string-array>
+    
+     <string-array name="themes">
+        <item>Tmavá</item>
+        <item>Svetlá</item>
+        <item>Pozadie</item>
+        <item>Priehľadná</item>
     </string-array>
 
     <string name="search">Hľadaj</string>
