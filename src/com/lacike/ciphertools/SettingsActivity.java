@@ -43,7 +43,7 @@ public class SettingsActivity extends PreferenceActivity implements
 	public static int getTheme(Context context) {
 		SharedPreferences sp = PreferenceManager
 				.getDefaultSharedPreferences(context);
-		return Integer.valueOf(sp.getString(THEME, "1"));
+		return Integer.valueOf(sp.getString(THEME, "0"));
 	}
 
 }
