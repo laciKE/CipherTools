@@ -12,7 +12,7 @@
 	<string name="help_morse2text">Decode given string in morse code to plain text.\n/ is a separator, Del removes last character.</string>
     <string name="help_rot13">Decodes and encodes given text using ROT13 cipher.\nSubstitution:\ncycle by 13 places, e.g\nA &#8596; N\nB &#8596; O\nC &#8596; P\n&#8230;</string>
     <string name="help_semaphore">Tap dots on border of image to display letter. Figure is determined from two last selected dots.</string>
-    <string name="help_streets">Search streets in choosen city by regular expression. Patterns ignors accents and they are not case sensitive.</string>
+    <string name="help_streets">Search streets in chosen city by regular expression. Patterns ignor accents and they are not case sensitive.</string>
     <string name="help_text2braille">Table for simple conversion from letters to braille signs.</string>
     <string name="help_text2morse">Encode given plain text to morse code.</string>
     <string name="help_vigenere">Encode and decode text using Vigenere cipher in alphabet with numbering letters from 0 or 1.</string>

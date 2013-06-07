@@ -1,11 +1,12 @@
 package com.lacike.ciphertools;
 
+import com.lacike.ciphertools.util.MyArrayAdapter;
+
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 /**
@@ -24,8 +25,8 @@ public class ToolsFragment extends ListFragment {
 		super.onActivityCreated(savedInstanceState);
 		Context context = getActivity();
 		tools = getResources().getStringArray(R.array.tools);
-		setListAdapter(new ArrayAdapter<String>(context,
-				android.R.layout.simple_list_item_1, tools));
+		setListAdapter(new MyArrayAdapter(context,
+				R.layout.list_item, tools));
 		getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 	}
 
@@ -52,4 +53,5 @@ public class ToolsFragment extends ListFragment {
 	public interface OnItemSelectedListener {
 		public void onItemSelected(int index);
 	}
+	
 }

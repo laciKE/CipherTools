@@ -17,7 +17,7 @@
         <item>ROT13</item>
         <item>Atbash</item>
         <item>Semaphore</item>
-        <item>Maritime signal flags with meaning</item>
+        <item>Maritime signal flags</item>
         <item>Color mixing</item>
         <item>Alphabet</item>
         <item>Frequency analysis</item>
@@ -29,6 +29,23 @@
         <item>Text to Mobile</item>
         <item>ASCII</item>
         -->
+    </string-array>
+    
+    <string-array name="tool_icons">
+        <item>@drawable/ic_list_braille2text</item>
+        <item>@drawable/ic_list_text2braille</item>
+        <item>@drawable/ic_list_morse2text</item>
+        <item>@drawable/ic_list_text2morse</item>
+        <item>@drawable/ic_list_vigenere</item>
+        <item>@drawable/ic_list_rot13</item>
+        <item>@drawable/ic_list_atbash</item>
+        <item>@drawable/ic_list_semaphore</item>
+        <item>@drawable/ic_list_flags</item>
+        <item>@drawable/ic_list_colors</item>
+        <item>@drawable/ic_list_alphabet</item>
+        <item>@drawable/ic_list_frequency</item>
+    	<item>@drawable/ic_list_calendar</item>
+    	<item>@drawable/ic_list_map</item>
     </string-array>
     
     <string-array name="themes">
